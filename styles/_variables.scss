@@ -1,0 +1,117 @@
+// Colors
+
+$main_regular_color: #323264;
+$main_alt_color: #46466E;
+$main_soft_color: #686887;
+$black_color: #000000;
+$white_color: #FFFFFF;
+
+$accent_color: #F0145A;
+
+$active_regular_color: #24A3FF;
+$active_hover_color: #0085FF;
+$active_active_color: #006CCF;
+
+$grey_bg_color: #F5F5FA;
+$grey_bg_alt_color: #EDEDF7;
+$grey_text_color: #B3B3BA;
+$grey_separator_color: #E6E6F0;
+
+$gradient_regular_color: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient_soft_color: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$gradient_red_color: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+$gradient_supersoft_color: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$gradient_red_text_color: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+
+
+
+
+
+// Link
+
+@mixin link-regular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: $active_regular_color;
+}
+
+@mixin link-hover {
+    @include link-hover();
+    color: $accent_color;
+}
+
+
+
+
+// Text
+
+@mixin h1 ($gradient_color){
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    background: $gradient_color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@mixin h2($color) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: $color;
+}
+
+@mixin h3($color) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: $color;
+}
+
+@mixin h3-caps($color) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color;
+}
+
+@mixin h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main_color;
+}
+
+@mixin paragraph ($color) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: $color;
+}
+
+@mixin unordered-list {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;
+    color: $black_color
+}
+
+@mixin ordered-list {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;    
+    color: $black_color;
+}
+

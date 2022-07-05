@@ -1,0 +1,26 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.main_wrapper-1 {
+  width: 100vw;
+  height: 2266px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+  position: relative;
+}
+
+/*# sourceMappingURL=styles.css.map */
