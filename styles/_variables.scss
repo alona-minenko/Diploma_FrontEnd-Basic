@@ -24,6 +24,22 @@ $gradient_supersoft_color: linear-gradient(228.57deg, #323264 11.93%, #323264 57
 $gradient_red_text_color: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 
 
+// Backgroud color partners
+
+$colors: (
+hillel_color: #1C4280,
+wannabiz_color:#143646,
+tapgerine_color:#F48B30,
+_3dlook_color: #9E4DC3,
+orangear_color:#FD9339,
+adtelligent_color:#E2E2E4,
+clickky_color:#C71C36,
+eco-leasing_color:#DCF3F9,
+infratek_color:#EAEAEA,
+city-park_color:#282240,
+artprint_color:#1D4568,
+ultimatecard_color:#000000,
+);
 
 
 
@@ -84,12 +100,12 @@ $gradient_red_text_color: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96
     color: $color;
 }
 
-@mixin h4 {
+@mixin h4 ($color){
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    color: $main_color;
+    color: $color;
 }
 
 @mixin paragraph ($color) {

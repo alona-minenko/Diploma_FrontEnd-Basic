@@ -7,11 +7,9 @@ $background_logo_width: 872.34px;
 .upper_wrapper {
     // width: 1920px;
     // height: 100%;
-
     width: 1600px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     margin: 0 auto;
 
 // .upper_wrapper__content-width {
@@ -119,7 +117,6 @@ $background_logo_width: 872.34px;
             }
 
             p {
-                height: 90px;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 19px;
@@ -227,4 +224,201 @@ $background_logo_width: 872.34px;
         width: 95.83%;
     }
 }
+
+
+
+
+.main_wrapper-2 {
+    width: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 60px;
+
+
+    &__team {
+        display: flex;        
+        height: 298px;        
+        background: #F5F5FA;
+        border-radius: 12px;
+
+        img {
+            border-radius: 12px 0px 0px 12px;
+            width: 400px;
+            object-fit: cover;
+        }
+
+        &_text {
+            padding: 30px;
+
+            h1 {
+                @include h1($gradient_red_text_color);
+                margin-bottom: 30px;
+            }
+
+            h4 {
+                @include h4 ($grey_text_color);
+                margin-bottom: 6px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: $grey_text_color;
+            }
+        }
+
+        &_text-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 99px;
+            height: 17px;
+            margin-bottom: 5px;
+        
+            h3 {
+                @include h3-caps($active_regular_color);
+                transition: .2s ease-in;
+            }
+    
+            svg {
+                color: #24A3FF;
+                transition: .2s ease-in;
+            }        
+        }
+
+        &_text-link:hover h3 {
+            color: $accent_color;
+        }
+
+        &_text-link:hover svg {
+            color: $accent_color;
+        }
+    }
+
+    &__paginator {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        width: 78px;
+        height: 16px;
+    }
+
+    &__h3-caps {
+        @include h3-caps($main_regular_color);
+        margin-bottom: 30px;
+    }
+
+
+    &__partners {
+        display: grid;
+        grid-template-columns: repeat(4, 430px);
+        width: 1720px;
+        height: 360px;
+        border-radius: 12px;
+        margin-bottom: 60px; 
+        overflow: hidden;
+
+        div {
+            width: 430px;
+            height: 120px;
+            // background-color: #EF8080;
+        }
+
+        @each $logo in hillel, wannabiz, tapgerine, _3dlook, orangear, adtelligent, clickky, eco-leasing, infratek, city-park, artprint, ultimatecard{
+            &-#{$logo} {
+                background: url("../../images/partners/#{$logo}.svg") no-repeat center;
+
+                background-color: map-get($colors, #{$logo}_color);              
+            }
+        }
+    }
+}
+
+
+.footer_recommended {
+    width: 100vw;
+    background: $grey_bg_color;
+    height: 563px;
+    padding-top: 30px;
+
+    &__info {
+        width: 1600px;
+        // display: flex;
+        // flex-direction: column;
+        margin: 0 auto;
+
+        &-text {
+            h1 {
+                @include h1($gradient_red_text_color);
+                margin-bottom: 30px;
+            }
+
+            &-link {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 136px;
+                height: 17px;
+                margin-bottom: 10px;
+        
+                h3 {
+                    @include h3-caps($active_regular_color);
+                    transition: .2s ease-in;
+                }
+        
+                svg {
+                    color: #24A3FF;
+                    transition: .2s ease-in;
+                }
+            }
+        
+            &-link:hover h3 {
+                color: $accent_color;
+            }
+            
+            &-link:hover svg {
+                color: $accent_color;
+            }
+        }
+        
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 513.33px);
+            height: 430px;
+            border-radius: 8px;
+            overflow: hidden;
+            gap: 30px;
+
+            div {
+                background-color: $white_color;
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
