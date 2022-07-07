@@ -167,14 +167,12 @@ $background_logo_width: 872.34px;
                 color: $accent_color;
             }
         }        
-    }
-
-
+    }   
 
     &__services_card {
         display: grid;
         grid-template-columns: repeat(3, 493.33px);
-        gap: 60px;
+        gap: 60px;        
 
         @for $item from 1 through 6 {
             &-#{$item}-svg {
@@ -204,7 +202,7 @@ $background_logo_width: 872.34px;
 }
 
 .upper_wrapper__shadow {
-    width: 100vw;
+    // width: 100vw;
     height: 20px;
     display: flex;
     flex-direction: column;
@@ -314,12 +312,13 @@ $background_logo_width: 872.34px;
 
     &__partners {
         display: grid;
-        grid-template-columns: repeat(4, 430px);
+        grid-template-columns: repeat(4, 25%);
+        // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
         width: 1720px;
         height: 360px;
         border-radius: 12px;
         margin-bottom: 60px; 
-        overflow: hidden;
+        overflow: hidden;        
 
         div {
             width: 430px;
@@ -337,7 +336,7 @@ $background_logo_width: 872.34px;
 
 
 .footer_recommended {
-    width: 100vw;
+    // width: 100vw;
     background: $grey_bg_color;
     height: 563px;
     padding-top: 30px;

@@ -210,7 +210,6 @@
 }
 
 .upper_wrapper__shadow {
-  width: 100vw;
   height: 20px;
   display: flex;
   flex-direction: column;
@@ -321,7 +320,7 @@
 }
 .main_wrapper-2__partners {
   display: grid;
-  grid-template-columns: repeat(4, 430px);
+  grid-template-columns: repeat(4, 25%);
   width: 1720px;
   height: 360px;
   border-radius: 12px;
@@ -382,7 +381,6 @@
 }
 
 .footer_recommended {
-  width: 100vw;
   background: #F5F5FA;
   height: 563px;
   padding-top: 30px;

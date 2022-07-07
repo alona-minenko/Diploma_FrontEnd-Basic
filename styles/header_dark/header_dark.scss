@@ -1,0 +1,134 @@
+@import "../_variables";
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px 0px 0px;
+
+    &__logo_main {
+        background-image: url("../../images/header/Logo_dark.png");
+        width: 130px;
+        height: 60px;
+        display: block;
+    }
+
+    &__right_side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0px;
+        gap: 16px;
+        width: 478px;
+        height: 66px;
+        z-index: 50;
+
+        a,
+        p {
+            color: $grey_text_color;
+        }
+
+        &_contacts {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            width: 100%;
+            height: 25px;
+
+            &_lang {
+                width: 99px;
+                display: flex;
+                align-items: flex-start;
+
+                a {
+                    display: inline-block;
+                    padding-top: 5px;
+                    width: 33px;
+                    height: 25px;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    font-size: 12px;
+                    text-align: center;
+                    letter-spacing: 1px;
+                }
+
+                .active {
+                    background: $accent_color;
+                }
+
+                &_ukr,
+                &_ru {
+                    transition: .2s ease-in;
+                }
+
+                &_ukr:hover,
+                &_ru:hover {
+                    background: $grey_bg_color;
+                }
+            }
+
+            &_separator {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $grey_separator_color;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &_number {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &_fb {
+                display: flex;
+                align-items: center;
+                transition: .2s ease-in;
+
+                &_svg {
+                    color: $grey_text_color;
+                    transition: .2s ease-in;
+                }
+
+                &_svg:hover {
+                    color: $accent_color;
+                }
+            }
+        }
+
+        &_nav {
+            display: grid;
+            grid-template-columns: 74px 69px 44px 104px 65px;
+            column-gap: 15px;
+            width: 416px;
+            height: 25px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+
+            a {
+                color: $active_regular_color;
+            }
+
+            &_underline {
+                height: 2px;
+                margin-top: 3px;
+                transition: .2s ease-in;
+            }
+
+            @for $i from 1 through 5 {
+                &_item#{$i}:hover &_underline {
+                    background: $active_regular_color;
+                }
+            }
+        }
+    }
+}
