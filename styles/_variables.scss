@@ -116,6 +116,14 @@ ultimatecard_color:#000000,
     color: $color;
 }
 
+@mixin paragraph-small($color) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: $color;
+}
+
 @mixin unordered-list {
     font-weight: 400;
     font-size: 18px;

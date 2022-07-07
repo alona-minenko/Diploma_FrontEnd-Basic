@@ -87,17 +87,18 @@ $background_logo_width: 872.34px;
                 transition: .2s ease-in;
             }
 
-            &-active {
+            .active {
                 background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
 
-            &-other:hover h1{
+            &-item:hover h1{
                 color: $accent_color;
-            }
-            
-        }
+            }            
+        }   
+
+
 
         &_separator {
             width: 4px;
@@ -323,13 +324,11 @@ $background_logo_width: 872.34px;
         div {
             width: 430px;
             height: 120px;
-            // background-color: #EF8080;
         }
 
         @each $logo in hillel, wannabiz, tapgerine, _3dlook, orangear, adtelligent, clickky, eco-leasing, infratek, city-park, artprint, ultimatecard{
             &-#{$logo} {
                 background: url("../../images/partners/#{$logo}.svg") no-repeat center;
-
                 background-color: map-get($colors, #{$logo}_color);              
             }
         }
@@ -342,6 +341,9 @@ $background_logo_width: 872.34px;
     background: $grey_bg_color;
     height: 563px;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     &__info {
         width: 1600px;
@@ -387,26 +389,57 @@ $background_logo_width: 872.34px;
             display: grid;
             grid-template-columns: repeat(3, 513.33px);
             height: 430px;
-            border-radius: 8px;
-            overflow: hidden;
             gap: 30px;
 
-            div {
+            &-wrapper {
                 background-color: $white_color;
+                border-radius: 8px;
+
+                img {
+                    border-radius: 8px 8px 0px 0px;
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 30px;
+                    gap: 15px;
+
+                    h4 {
+                        @include h4($active_regular_color);
+                        transition: .2s ease-in;
+                    }
+
+                    h4:hover {
+                        color: $accent_color;
+                    }
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 15px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        color: $grey_text_color;
+                    }
+
+                    &-separator {
+                        width: 453.33px;
+                        height: 4px;
+                        background: #E6E6F0;
+                    }
+
+                    p {
+                        @include paragraph-small($black_color);
+                    }
+                }
             }
         }
-
     }
-
-
-
-
-
-
-
-
-
-
 }
 
 

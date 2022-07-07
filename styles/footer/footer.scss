@@ -1,0 +1,122 @@
+@import "../_variables";
+
+.footer {
+    width: 100vw;
+    background: $grey_bg_color;
+    height: 171px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 1600px;
+        margin: 0 auto;
+        gap: 30px;
+
+        &-separator {
+            width: 100%;
+            height: 2px;
+            background-color: $grey_separator_color;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 79px;
+
+            &__contacts {
+                display: flex;
+                flex-direction: column;
+                gap: 21px;                
+                width: 398px;
+                height: 79px;
+
+                &-upper {
+                    p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $main_regular_color;
+                    }
+
+                    a {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 15px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        color: $active_regular_color;
+                        transition: 0.2s ease-in;
+                    }
+
+                    a:hover {
+                        color: $accent_color;
+                    }
+                }                
+
+                &-upper-separator, &-lower-separator {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: $grey_text_color;
+                }
+
+                &-lower {
+                    &-fb {
+                        display: flex;
+                        align-items: center;
+                        transition: .2s ease-in;
+
+                        &-svg {
+                            color: $active_regular_color;
+                            transition: .2s ease-in;
+                        }
+
+                        &-svg:hover {
+                            color: $accent_color;
+                        }
+                    }
+
+                    &-number, &-email {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+
+                    &-number {
+                        color: $main_alt_color;
+                    }
+
+                    &-email {
+                        color: $active_regular_color;
+                        transition: .2s ease-in;
+                    }
+
+                    &-email:hover {
+                        color: $accent_color;
+                    }
+                }
+            }
+
+            &__contacts>div {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;                
+            }
+
+            &__copyright {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: $grey_text_color;
+            }
+        }      
+    }
+}

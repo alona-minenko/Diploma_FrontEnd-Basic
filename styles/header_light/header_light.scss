@@ -24,8 +24,7 @@
         height: 66px;
         z-index: 50;
 
-        a,
-        p {
+        a, p {
             color: $white_color;
         }
 
@@ -53,7 +52,7 @@
                     letter-spacing: 1px;
                 }
 
-                a:last-child {
+                .active {
                     background: $accent_color;
                 }
 

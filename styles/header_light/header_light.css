@@ -20,8 +20,7 @@
   height: 66px;
   z-index: 50;
 }
-.header__right_side a,
-.header__right_side p {
+.header__right_side a, .header__right_side p {
   color: #FFFFFF;
 }
 .header__right_side_contacts {
@@ -47,7 +46,7 @@
   text-align: center;
   letter-spacing: 1px;
 }
-.header__right_side_contacts_lang a:last-child {
+.header__right_side_contacts_lang .active {
   background: #F0145A;
 }
 .header__right_side_contacts_lang_ukr, .header__right_side_contacts_lang_ru {

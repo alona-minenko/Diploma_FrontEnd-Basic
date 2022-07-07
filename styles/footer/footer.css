@@ -1,3 +1,101 @@
-
+.footer {
+  width: 100vw;
+  background: #F5F5FA;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  width: 1600px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.footer__content-separator {
+  width: 100%;
+  height: 2px;
+  background-color: #E6E6F0;
+}
+.footer__content-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 79px;
+}
+.footer__content-text__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 398px;
+  height: 79px;
+}
+.footer__content-text__contacts-upper p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+.footer__content-text__contacts-upper a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+  transition: 0.2s ease-in;
+}
+.footer__content-text__contacts-upper a:hover {
+  color: #F0145A;
+}
+.footer__content-text__contacts-upper-separator, .footer__content-text__contacts-lower-separator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #B3B3BA;
+}
+.footer__content-text__contacts-lower-fb {
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease-in;
+}
+.footer__content-text__contacts-lower-fb-svg {
+  color: #24A3FF;
+  transition: 0.2s ease-in;
+}
+.footer__content-text__contacts-lower-fb-svg:hover {
+  color: #F0145A;
+}
+.footer__content-text__contacts-lower-number, .footer__content-text__contacts-lower-email {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.footer__content-text__contacts-lower-number {
+  color: #46466E;
+}
+.footer__content-text__contacts-lower-email {
+  color: #24A3FF;
+  transition: 0.2s ease-in;
+}
+.footer__content-text__contacts-lower-email:hover {
+  color: #F0145A;
+}
+.footer__content-text__contacts > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.footer__content-text__copyright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B3B3BA;
+}
 
 /*# sourceMappingURL=footer.css.map */
