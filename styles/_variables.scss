@@ -124,18 +124,64 @@ ultimatecard_color:#000000,
     color: $color;
 }
 
-@mixin unordered-list {
+@mixin unordered-list($color){
     font-weight: 400;
     font-size: 18px;
     line-height: 144%;
-    color: $black_color
+    color: $color
 }
 
-@mixin ordered-list {
+@mixin ordered-list($color) {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 144%;    
-    color: $black_color;
+    color: $color;
 }
+
+
+
+// Functions, mixins
+
+@function main-content-width-calc($margin) {
+    @return  calc(100% - $margin);
+}
+
+@mixin main-content-width($margin) {
+    max-width: 1600px;
+    width: main-content-width-calc($margin*2);
+}
+
+@function calc-left-background-logo($width) {
+    @return calc(50% - $width/2);
+}
+
+@mixin background-logo-parameters($width,$height) {
+    width:$width;
+    height:$height;
+    left: calc-left-background-logo($width);
+    background-size: $width $height;
+}
+
+@function calc-top-scroll-svg($background-logo-height) {
+    @return calc($background-logo-height - 30px - 42px);
+}
+
+@function calc-top-background-h1($background-logo-height) {
+    @return calc($background-logo-height/2 - 46px/2);
+}
+
+@function calc-experience-margin-top($background-logo-height,$header-height,$gap) {
+    @return calc($background-logo-height - $header-height + $gap);
+}
+
+
+
+// Margins, gaps
+
+$margin-desctop: 60px;
+$margin-mobile-min: 30px;
+
+$gap-desctop:60px;
+$gap-mobile-min:30px;
 

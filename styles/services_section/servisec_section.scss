@@ -1,0 +1,96 @@
+@import "../_variables";
+
+
+
+
+.upper_wrapper {
+    &__services {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-desctop;
+        margin-top: $margin-desctop;
+
+        @media screen and (max-width:635px) {
+            margin-top: $margin-mobile-min;
+            gap: $gap-mobile-min;
+        }
+
+        &_name {
+            h1 {
+                @include h1($gradient_red_text_color);
+
+                @media screen and (max-width:635px) {
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+            }
+
+            &-link {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 94px;
+                height: 17px;
+                margin-bottom: 10px;
+
+                h3 {
+                    @include h3-caps($active_regular_color);
+                    transition: .2s ease-in;
+                }
+
+                svg {
+                    color: #24A3FF;
+                    transition: .2s ease-in;
+                }
+            }
+
+            &-link:hover h3 {
+                color: $accent_color;
+            }
+
+            &-link:hover svg {
+                color: $accent_color;
+            }
+        }
+    }
+
+    &__services_card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $gap-desctop;
+
+        @media screen and (max-width:1020px) {
+            grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+        }
+
+        @media screen and (max-width:635px) {
+            gap: $gap-mobile-min;
+        }
+
+        @for $item from 1 through 6 {
+            &-#{$item}-svg {
+                padding: 14px;
+                width: 92px;
+                height: 92px;
+                background: $white_color;
+                border-radius: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        h3 {
+            @include h3($active_regular_color);
+            margin-bottom: 15px;
+            transition: .3s ease-in;
+
+            &:hover {
+                color: $accent_color;
+            }
+        }
+
+        p {
+            @include paragraph($white_color);
+        }
+    }
+}

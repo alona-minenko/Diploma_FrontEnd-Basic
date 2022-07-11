@@ -1,49 +1,91 @@
 @import "../_variables";
 
-$background_logo_height: 1000px;
-$background_logo_width: 872.34px;
+$background_logo_height-Desktop-HD: 1000px;
+$background_logo_width-Desktop-HD: 872.34px;
+
+$background_logo_height-Desktop-SD: 799px;
+$background_logo_width-Desktop-SD: 697px;
+
+$background_logo_height-Tablet-HD: 768px;
+$background_logo_width-Tablet-HD: 669.96px;
+
+$background_logo_height-Tablet-SD: 1024px;
+$background_logo_width-Tablet-SD: 893.28px;
+
+$background_logo_height-Mobile: 600px;
+$background_logo_width-Mobile: 523.4px;
+
+
+
+
+header .header__logo_main_slash-page-name {
+    display: none;
+}
+
 
 
 .upper_wrapper {
-    // width: 1920px;
-    // height: 100%;
-    width: 1600px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-
-// .upper_wrapper__content-width {
-//     width: 1600px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     margin: 0 auto;
-// }
-
     &__background_logo {
         background-image: url("../../images/homepage/Symbol.svg");
         position: absolute;
-        width: 872.34px;
-        height: $background_logo_height;
-        left: calc(50% - $background_logo_width/2 + 0.17px);
-        top: 0px;        
+        @include background-logo-parameters($background_logo_width-Desktop-HD,$background_logo_height-Desktop-HD);
+        top: 0px;     
+        
+        @media screen and (max-width:1440px) {
+            @include background-logo-parameters($background_logo_width-Desktop-SD,$background_logo_height-Desktop-SD);
+        }
+
+        @media screen and (max-width:1020px) {
+            @include background-logo-parameters ($background_logo_width-Tablet-HD,$background_logo_height-Tablet-HD);
+        }
+
+        @media screen and (max-width:768px) {
+            @include background-logo-parameters ($background_logo_width-Tablet-SD, $background_logo_height-Tablet-SD);
+            width: 745px;
+        }
+
+        @media screen and (max-width:650px) {
+            @include background-logo-parameters ($background_logo_width-Mobile, $background_logo_height-Mobile);
+            width: 435px;
+        }
+
+
+
 
         &_scroll_svg {
             color: $white_color;
             transition: .2s ease-in;
             position: absolute;
-            top: calc($background_logo_height - 30px - 42px);
+            top: calc-top-scroll-svg($background_logo_height-Desktop-HD);
             left: calc(50% - 42px/2);
+
+            @media screen and (max-width:1440px) {
+                top: calc-top-scroll-svg($background_logo_height-Desktop-SD);
+            }
+
+            @media screen and (max-width:1020px) {
+                top: calc-top-scroll-svg($background_logo_height-Tablet-HD);                
+            }
+
+            @media screen and (max-width:768px) {
+                top: calc-top-scroll-svg($background_logo_height-Tablet-SD);
+            }
+
+            @media screen and (max-width:650px) {
+                top: calc-top-scroll-svg($background_logo_height-Mobile);
+            }
         }
 
         &_scroll_svg:hover {
             color: $accent_color;
         }
-
     }
 
+
+
     &__background_h1 {
-        width: 800px;
+        // width: 800px;
+        width: 552px;
         position: absolute;
         font-style: normal;
         font-weight: 700;
@@ -51,18 +93,59 @@ $background_logo_width: 872.34px;
         line-height: 46px;
         text-align: center;
         color: #FFFFFF;
-        left: calc(50% - 800px/2);
-        top: calc($background_logo_height/2 - 46px/2);
+        left: calc(50% - 552px/2);
+        top: calc-top-background-h1($background_logo_height-Desktop-HD);
+
+        @media screen and (max-width:1440px) {
+            top: calc-top-background-h1($background_logo_height-Desktop-SD);
+        }
+        
+        @media screen and (max-width:1020px) {
+            top: calc-top-background-h1($background_logo_height-Tablet-HD);
+        }
+    
+        @media screen and (max-width:768px) {
+            top: calc-top-background-h1($background_logo_height-Tablet-SD);
+        }
+    
+        @media screen and (max-width:650px) {
+            top: calc-top-background-h1($background_logo_height-Mobile);
+            width: 280px;
+            left: calc(50% - 280px/2);
+        }
     } 
 
     
 
     &__experience {
-        margin-top: calc($background_logo_height - 116px + 60px );
+        margin-top: calc-experience-margin-top($background_logo_height-Desktop-HD, 116px, 60px);
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 60px;
+        gap: $gap-desctop;
+
+        @media screen and (max-width:1440px) {
+            margin-top: calc-experience-margin-top($background_logo_height-Desktop-SD, 116px, 60px);
+        }
+    
+        @media screen and (max-width:1020px) {
+            margin-top: calc-experience-margin-top($background_logo_height-Tablet-HD, 220px, 60px);
+        }
+
+        @media screen and (max-width:1000px) {
+            flex-direction: column;
+            align-items: unset;
+        }
+    
+        @media screen and (max-width:768px) {
+            margin-top: calc-experience-margin-top($background_logo_height-Tablet-SD, 160px, 60px);
+        }
+    
+        @media screen and (max-width:650px) {
+            margin-top: calc-experience-margin-top($background_logo_height-Mobile, 102px, 30px);
+            gap: $gap-mobile-min;
+        }
+
 
         &_left {
             display: flex;
@@ -72,6 +155,17 @@ $background_logo_width: 872.34px;
             width: 375px;
             height: 274px;
             
+            @media screen and (max-width:1000px) {
+                flex-direction: row;
+                width: calc(100% + $margin-desctop);
+                overflow: hidden;
+                height: 52px;
+                white-space: nowrap;
+            }
+
+            @media screen and (max-width:650px) {
+                width: calc(100% + $margin-mobile-min);
+            }
 
             a {
                 width: fit-content;                 
@@ -85,6 +179,12 @@ $background_logo_width: 872.34px;
                 line-height: 46px;               
                 color: $grey_text_color;
                 transition: .2s ease-in;
+
+                @media screen and (max-width:650px) {
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 37px;
+                }
             }
 
             .active {
@@ -99,22 +199,38 @@ $background_logo_width: 872.34px;
         }   
 
 
-
         &_separator {
             width: 4px;
             height: 303px;
             background: rgba(255, 255, 255, 0.3);
+
+            @media screen and (max-width:1000px) {
+                width: 100%;
+                height: 4px;
+            }
         }
+
 
         &_right {
             display: grid;
             gap: 30px;
-            width: 861px;
-            height: 157px;
+            max-width: 861px;
+            // Отнимаю от ширины родителя ширину левого блока минус 2 gap и ширина блока с вертикальной чертой
+            width: calc(100% - 375px - 120px - 4px);
+            // height: 157px;
+
+            @media screen and (max-width:1000px) {
+                width: 100%;
+            }
 
             h2 {
                 @include h2($white_color);
 
+                @media screen and (max-width:650px) {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
 
             p {
@@ -126,134 +242,70 @@ $background_logo_width: 872.34px;
             }
         }
     }
-
-
-
-    &__services {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        margin-top: 60px;
-
-        &_name {
-            h1 {
-                @include h1($gradient_red_text_color);
-            }
-        
-            &-link {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 94px;
-                height: 17px;
-                margin-bottom: 10px;
-
-                h3 {
-                    @include h3-caps($active_regular_color);
-                    transition: .2s ease-in;
-                }
-
-                svg {
-                    color: #24A3FF;
-                    transition: .2s ease-in;
-                }            
-            }
-
-            &-link:hover h3 {
-                color: $accent_color;
-            }
-
-            &-link:hover svg {
-                color: $accent_color;
-            }
-        }        
-    }   
-
-    &__services_card {
-        display: grid;
-        grid-template-columns: repeat(3, 493.33px);
-        gap: 60px;        
-
-        @for $item from 1 through 6 {
-            &-#{$item}-svg {
-                padding: 14px;               
-                width: 92px;
-                height: 92px;                
-                background: $white_color;
-                border-radius: 24px;
-                margin-bottom: 30px;
-            }            
-        }
-
-        h3 {
-            @include h3($active_regular_color);
-            margin-bottom: 15px;
-            transition: .3s ease-in;     
-            
-            &:hover {
-                color: $accent_color;
-            }
-        }
-
-        p {
-            @include paragraph($white_color);
-        }
-    }
 }
 
-.upper_wrapper__shadow {
-    // width: 100vw;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    div {
-        height: 10px;
-        border-radius: 0px 0px 12px 12px;
-    }
-
-    &1 {
-        background: #CACADB;
-        width: 97.91%;
-    }
-
-    &2 {
-        background: #E7E7F2;
-        width: 95.83%;
-    }
-}
+// .main_wrapper-2 {
+    // width: 1600px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // margin: 0 auto;
+    // margin-top: 60px;
 
 
-
-
-.main_wrapper-2 {
-    width: 1600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 60px;
-
-
-    &__team {
-        display: flex;        
-        height: 298px;        
+    .main_info__team {
+        display: flex;     
+        height: fit-content;    
+        @include main-content-width($margin-desctop);
+        margin: 0px auto 30px;           
         background: #F5F5FA;
         border-radius: 12px;
+
+        @media screen and (max-width:830px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (max-width:650px) {
+            @include main-content-width($margin-mobile-min);
+            margin: $margin-mobile-min auto 30px;
+        }
+
 
         img {
             border-radius: 12px 0px 0px 12px;
             width: 400px;
-            object-fit: cover;
+            height: 298px;
+            object-fit: cover;    
+            
+            @media screen and (max-width:830px) {
+                border-radius: 12px 12px 0px 0px;
+                width: 100%;
+                height: 500px;
+            }
+            
         }
 
         &_text {
             padding: 30px;
+            width: calc(100% - 400px);
+
+            @media screen and (max-width:1043px) {
+                width: 100%;
+            }
+
+            @media screen and (max-width:650px) {
+                word-wrap: break-word;
+            }
 
             h1 {
                 @include h1($gradient_red_text_color);
                 margin-bottom: 30px;
+
+                @media screen and (max-width:650px) {
+                    font-size: 30px;
+                    line-height: 37px;
+                }
             }
 
             h4 {
@@ -296,161 +348,3 @@ $background_logo_width: 872.34px;
             color: $accent_color;
         }
     }
-
-    &__paginator {
-        margin-top: 30px;
-        margin-bottom: 60px;
-        width: 78px;
-        height: 16px;
-    }
-
-    &__h3-caps {
-        @include h3-caps($main_regular_color);
-        margin-bottom: 30px;
-    }
-
-
-    &__partners {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-        width: 1720px;
-        height: 360px;
-        border-radius: 12px;
-        margin-bottom: 60px; 
-        overflow: hidden;        
-
-        div {
-            width: 430px;
-            height: 120px;
-        }
-
-        @each $logo in hillel, wannabiz, tapgerine, _3dlook, orangear, adtelligent, clickky, eco-leasing, infratek, city-park, artprint, ultimatecard{
-            &-#{$logo} {
-                background: url("../../images/partners/#{$logo}.svg") no-repeat center;
-                background-color: map-get($colors, #{$logo}_color);              
-            }
-        }
-    }
-}
-
-
-.footer_recommended {
-    // width: 100vw;
-    background: $grey_bg_color;
-    height: 563px;
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    &__info {
-        width: 1600px;
-        // display: flex;
-        // flex-direction: column;
-        margin: 0 auto;
-
-        &-text {
-            h1 {
-                @include h1($gradient_red_text_color);
-                margin-bottom: 30px;
-            }
-
-            &-link {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 136px;
-                height: 17px;
-                margin-bottom: 10px;
-        
-                h3 {
-                    @include h3-caps($active_regular_color);
-                    transition: .2s ease-in;
-                }
-        
-                svg {
-                    color: #24A3FF;
-                    transition: .2s ease-in;
-                }
-            }
-        
-            &-link:hover h3 {
-                color: $accent_color;
-            }
-            
-            &-link:hover svg {
-                color: $accent_color;
-            }
-        }
-        
-        &-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 513.33px);
-            height: 430px;
-            gap: 30px;
-
-            &-wrapper {
-                background-color: $white_color;
-                border-radius: 8px;
-
-                img {
-                    border-radius: 8px 8px 0px 0px;
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    }
-
-                &-text {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    padding: 30px;
-                    gap: 15px;
-
-                    h4 {
-                        @include h4($active_regular_color);
-                        transition: .2s ease-in;
-                    }
-
-                    h4:hover {
-                        color: $accent_color;
-                    }
-
-                    h3 {
-                        font-weight: 700;
-                        font-size: 12px;
-                        line-height: 15px;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                        color: $grey_text_color;
-                    }
-
-                    &-separator {
-                        width: 453.33px;
-                        height: 4px;
-                        background: #E6E6F0;
-                    }
-
-                    p {
-                        @include paragraph-small($black_color);
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

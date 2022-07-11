@@ -1,0 +1,94 @@
+.main_info__h3-caps {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.main_info__partners {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  max-width: 1720px;
+  height: fit-content;
+  border-radius: 12px;
+  margin: 0px auto 60px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1720px) {
+  .main_info__partners {
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main_info__partners {
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  }
+}
+@media screen and (max-width: 531px) {
+  .main_info__partners {
+    margin: 0px auto;
+  }
+}
+@media screen and (max-width: 531px) {
+  .main_info__partners .desctop {
+    display: none;
+  }
+}
+.main_info__partners a {
+  height: 120px;
+}
+.main_info__partners-hillel {
+  background: url("../../images/partners/hillel.svg") no-repeat center;
+  background-color: #1C4280;
+}
+.main_info__partners-wannabiz {
+  background: url("../../images/partners/wannabiz.svg") no-repeat center;
+  background-color: #143646;
+}
+.main_info__partners-tapgerine {
+  background: url("../../images/partners/tapgerine.svg") no-repeat center;
+  background-color: #F48B30;
+}
+.main_info__partners-_3dlook {
+  background: url("../../images/partners/_3dlook.svg") no-repeat center;
+  background-color: #9E4DC3;
+}
+.main_info__partners-orangear {
+  background: url("../../images/partners/orangear.svg") no-repeat center;
+  background-color: #FD9339;
+}
+.main_info__partners-adtelligent {
+  background: url("../../images/partners/adtelligent.svg") no-repeat center;
+  background-color: #E2E2E4;
+}
+.main_info__partners-clickky {
+  background: url("../../images/partners/clickky.svg") no-repeat center;
+  background-color: #C71C36;
+}
+.main_info__partners-eco-leasing {
+  background: url("../../images/partners/eco-leasing.svg") no-repeat center;
+  background-color: #DCF3F9;
+}
+.main_info__partners-infratek {
+  background: url("../../images/partners/infratek.svg") no-repeat center;
+  background-color: #EAEAEA;
+}
+.main_info__partners-city-park {
+  background: url("../../images/partners/city-park.svg") no-repeat center;
+  background-color: #282240;
+}
+.main_info__partners-artprint {
+  background: url("../../images/partners/artprint.svg") no-repeat center;
+  background-color: #1D4568;
+}
+.main_info__partners-ultimatecard {
+  background: url("../../images/partners/ultimatecard.svg") no-repeat center;
+  background-color: #000000;
+}
+
+/*# sourceMappingURL=partners_section.css.map */

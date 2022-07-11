@@ -1,0 +1,60 @@
+@import "../_variables";
+
+.main_info__h3-caps {
+    @include h3-caps($main_regular_color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.main_info__partners {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    max-width: 1720px;
+    height: fit-content;
+    border-radius: 12px;
+    margin: 0px auto $margin-desctop;
+    overflow: hidden;
+
+    @media screen and (max-width:1720px) {
+        border-radius: 0px;
+    }
+
+    @media screen and (max-width:1024px) {
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    }
+
+    @media screen and (max-width:531px) {
+        margin: 0px auto;
+    }
+
+    & .desctop {
+        @media screen and (max-width:531px) {
+            display: none;
+        }
+    }
+
+    a {
+        // width: 430px;
+        height: 120px;
+    }
+
+    @each $logo in hillel,
+    wannabiz,
+    tapgerine,
+    _3dlook,
+    orangear,
+    adtelligent,
+    clickky,
+    eco-leasing,
+    infratek,
+    city-park,
+    artprint,
+    ultimatecard {
+        &-#{$logo} {
+            background: url("../../images/partners/#{$logo}.svg") no-repeat center;
+            background-color: map-get($colors, #{$logo}_color);
+        }
+    }
+}

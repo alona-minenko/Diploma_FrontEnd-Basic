@@ -1,0 +1,39 @@
+@import "../_variables";
+
+.paginator {
+        margin: 30px auto $margin-desctop;
+        display: flex;
+        width: 78px;
+        height: 16px;
+        gap: 15px;
+
+        @for $i from 1 through 3 {
+            &-#{$i}:hover:not(.paginator-active) {
+                background: $active_regular_color;
+                opacity: 0.6;
+            }
+        }
+
+        button {
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            background: $active_regular_color;
+            opacity: 0.2;
+            transition: .2s ease-in;
+
+            // &:hover {
+            //     background: $active_regular_color;
+            //     opacity: 0.6;
+            // }
+            
+
+            &.paginator-active {
+                background: $active_regular_color;
+                opacity: unset;
+            }
+        }
+}
+

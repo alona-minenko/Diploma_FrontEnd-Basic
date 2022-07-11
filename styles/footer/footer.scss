@@ -3,18 +3,22 @@
 .footer {
     // width: 100vw;
     background: $grey_bg_color;
-    height: 171px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 30px;
+    padding: 30px 0px;
 
     &__content {
         display: flex;
         flex-direction: column;
-        width: 1600px;
+        @include main-content-width($margin-desctop);
         margin: 0 auto;
         gap: 30px;
+
+        @media screen and (max-width:635px) {
+            @include main-content-width($margin-mobile-min);
+        }
 
         &-separator {
             width: 100%;
@@ -23,25 +27,35 @@
         }
 
         &-text {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: 79px;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            height: fit-content;
+            float: left;
+
+            @media screen and (max-width:760px) {
+                float: none; 
+                display: flex;     
+                flex-direction: column; 
+                align-items: center;
+                gap: 30px;         
+            }
 
             &__contacts {
                 display: flex;
                 flex-direction: column;
                 gap: 21px;                
-                width: 398px;
-                height: 79px;
+                width: fit-content;
+                height: fit-content;
 
+                
                 &-upper {
                     p {
                     font-style: normal;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
-                    color: $main_regular_color;
+                    color: $main_regular_color;                    
                     }
 
                     a {
@@ -60,11 +74,17 @@
                     }
                 }                
 
-                &-upper-separator, &-lower-separator {
+                &-upper-separator,&-lower-separator {
                     width: 6px;
                     height: 6px;
                     border-radius: 50%;
-                    background: $grey_text_color;
+                    background: $grey_text_color;                    
+                }
+
+                &-upper-separator,&-lower-separator {
+                    @media screen and (max-width:760px) {
+                        display: none;
+                    }
                 }
 
                 &-lower {
@@ -105,10 +125,13 @@
             }
 
             &__contacts>div {
-                display: flex;
-                flex-direction: row;
+                display: flex;                
                 gap: 10px;
-                align-items: center;                
+                align-items: center;      
+                
+                @media screen and (max-width:760px) {
+                    flex-direction: column;
+                }
             }
 
             &__copyright {
@@ -116,6 +139,14 @@
                 font-size: 16px;
                 line-height: 20px;
                 color: $grey_text_color;
+                float: right;
+                margin-top: -79px;
+
+                @media screen and (max-width:760px) {
+                    float: none;    
+                    margin: 0px;    
+                    text-align: center;            
+                }
             }
         }      
     }

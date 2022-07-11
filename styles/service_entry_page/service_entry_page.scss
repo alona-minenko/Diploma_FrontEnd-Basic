@@ -1,0 +1,141 @@
+@import "../_variables";
+
+.upper_wrapper {
+    gap: $gap-desctop;
+
+    @media screen and (max-width:650px) {
+        gap: $gap-mobile-min;
+    }
+
+    &__shadow {
+        margin-bottom: $margin-desctop;
+    }
+
+    &__service {
+        &_name {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            margin: 0 auto;
+            width: calc(100% - 240px);
+
+            @media screen and (max-width:1400px) {
+                width: 100%;
+            }
+
+            img {
+                padding: 14px;
+                width: 92px;
+                height: 92px;
+                background: $white_color;
+                border-radius: 24px;
+            }
+
+            &-h1 {
+                @include h1($gradient_red_text_color);
+                
+                @media screen and (max-width:650px) {
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+            }
+
+            &-p {
+                font-weight: 400;
+                font-size: 19px;
+                line-height: 158%;
+                text-align: center;
+                color: $white_color;
+            }
+
+            &-button {
+                border: none;
+                width: 208px;
+                height: 56px;
+                padding: 18px 30px;
+                border-radius: 12px;
+                background: $active_regular_color;
+                box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+                color: $white_color;
+                cursor: pointer;
+            }
+        }
+
+
+
+        &_about {
+            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 240px);
+            margin: 0 auto;
+
+            @media screen and (max-width:1400px) {
+                width: 100%;
+            }
+
+            &-separator{
+                height: 4px;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            &-h3 {
+                @include h3($white_color);
+            }
+
+            &-list {
+                display: flex;
+                gap: $gap-desctop;
+                width: 100%;
+
+                @media screen and (max-width:650px) {
+                    flex-direction: column;
+                    gap: $gap-mobile-min;
+                }
+
+                &-left, &-right {
+                    width: calc(100% - $gap-desctop);
+                    @include unordered-list($white_color);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding-left: 14px;
+
+                    li {
+                        position: relative;
+                    }
+
+                    li:before {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        background-color: $accent_color;
+                        left: -14px;
+                        top: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer .footer_recommended {
+    h1 {
+        @media screen and (max-width:693px) {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}

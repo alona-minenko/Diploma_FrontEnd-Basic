@@ -1,0 +1,151 @@
+@import "../_variables";
+
+.footer_recommended {
+    // width: 100vw;
+    background: $grey_bg_color;
+    height: fit-content;
+    padding-top: 30px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+
+    &__info {
+        @include main-content-width($margin-desctop);
+        // display: flex;
+        // flex-direction: column;
+        margin: 0 auto;
+
+        @media screen and (max-width:650px) {
+            @include main-content-width($margin-mobile-min);
+        }
+
+        &-text {
+            h1 {
+                @include h1($gradient_red_text_color);
+                margin-bottom: 30px;
+
+                @media screen and (max-width:693px) {
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+            }
+
+            &-link {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 136px;
+                height: 17px;
+                margin-bottom: 10px;
+
+                h3 {
+                    @include h3-caps($active_regular_color);
+                    transition: .2s ease-in;
+                }
+
+                svg {
+                    color: #24A3FF;
+                    transition: .2s ease-in;
+                }
+            }
+
+            &-link:hover h3 {
+                color: $accent_color;
+            }
+
+            &-link:hover svg {
+                color: $accent_color;
+            }
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(281.33px, 1fr));
+            // height: 430px;
+            height: fit-content;
+            gap: 30px;
+
+            @media screen and (max-width:1023.5px) {
+                // grid-template-columns: 1fr 1fr;
+                // grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                    "footer_recommended__info-cards-wrapper-1 footer_recommended__info-cards-wrapper-2"
+                    "footer_recommended__info-cards-wrapper-3 footer_recommended__info-cards-wrapper-3";
+            }
+
+            @media screen and (max-width:693px) {
+                grid-template-areas:
+                    "footer_recommended__info-cards-wrapper-1"
+                    "footer_recommended__info-cards-wrapper-2"
+                    "footer_recommended__info-cards-wrapper-3";
+            }
+
+            &-wrapper {
+                background-color: $white_color;
+                border-radius: 8px;
+
+                &-1 {
+                    @media screen and (max-width:1023.5px) {
+                        grid-area: footer_recommended__info-cards-wrapper-1;
+                    }
+                }
+
+                &-2 {
+                    @media screen and (max-width:1023.5px) {
+                        grid-area: footer_recommended__info-cards-wrapper-2;
+                    }
+                }
+
+                &-3 {
+                    @media screen and (max-width:1023.5px) {
+                        grid-area: footer_recommended__info-cards-wrapper-3;
+                    }
+                }
+
+
+                img {
+                    border-radius: 8px 8px 0px 0px;
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 30px;
+                    gap: 15px;
+
+                    h4 {
+                        @include h4($active_regular_color);
+                        transition: .2s ease-in;
+                    }
+
+                    h4:hover {
+                        color: $accent_color;
+                    }
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 15px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        color: $grey_text_color;
+                    }
+
+                    &-separator {
+                        width: 100%;
+                        height: 4px;
+                        background: #E6E6F0;
+                    }
+
+                    p {
+                        @include paragraph-small($black_color);
+                    }
+                }
+            }
+        }
+    }
+}
