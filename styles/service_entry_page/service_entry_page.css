@@ -68,6 +68,169 @@
   color: #FFFFFF;
   cursor: pointer;
 }
+.upper_wrapper__service_name-form-modal-window {
+  background-color: #686887;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+  display: none;
+  pointer-events: none;
+}
+.upper_wrapper__service_name-form-modal-window > form {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  background: #F5F5FA;
+  box-shadow: 0px 15px 80px rgba(40, 40, 86, 0.5);
+  border-radius: 12px;
+}
+@media screen and (max-width: 690px) {
+  .upper_wrapper__service_name-form-modal-window > form {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+.upper_wrapper__service_name-form-modal-window:target {
+  display: block;
+  pointer-events: auto;
+}
+.upper_wrapper__service_name-form-modal-window input {
+  padding: 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+  transition: 0.2s ease-in;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162%;
+}
+.upper_wrapper__service_name-form-modal-window input::-webkit-input-placeholder {
+  color: #B3B3BA;
+}
+.upper_wrapper__service_name-form-modal-window input:hover {
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+}
+.upper_wrapper__service_name-form-modal-window input:focus {
+  border: 1px solid #24A3FF;
+  outline: none;
+}
+.upper_wrapper__service_name-form-modal-window input:valid {
+  color: #000000;
+}
+.upper_wrapper__service_name-form-modal-window textarea {
+  resize: none;
+  width: 100%;
+  height: 130px;
+  padding: 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: 0.2s ease-in;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162%;
+  color: #B3B3BA;
+}
+.upper_wrapper__service_name-form-modal-window textarea::-webkit-input-placeholder {
+  color: #B3B3BA;
+}
+.upper_wrapper__service_name-form-modal-window textarea:hover {
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+}
+.upper_wrapper__service_name-form-modal-window textarea:focus {
+  border: 1px solid #24A3FF;
+  outline: none;
+}
+.upper_wrapper__service_name-form-modal-window textarea:valid {
+  color: #000000;
+}
+.upper_wrapper__service_name-form-modal-window-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.upper_wrapper__service_name-form-modal-window-close {
+  cursor: pointer;
+  background-image: url("../../images/header/burger_close.svg");
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  float: right;
+}
+.upper_wrapper__service_name-form-modal-window-close:hover {
+  background-color: #E6E6F0;
+  border-radius: 8px;
+}
+.upper_wrapper__service_name-form-modal-window h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 500px) {
+  .upper_wrapper__service_name-form-modal-window h1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+.upper_wrapper__service_name-form-modal-window-upper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upper_wrapper__service_name-form-modal-window-lower {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upper_wrapper__service_name-form-modal-window-lower h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+}
+.upper_wrapper__service_name-form-modal-window button {
+  padding: 18px 30px;
+  gap: 10px;
+  width: 100%;
+  height: 56px;
+  background: #24A3FF;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.upper_wrapper__service_name-form-modal-window button:hover {
+  background: #0085FF;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+}
+.upper_wrapper__service_name-form-modal-window button:active {
+  background: #006CCF;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+}
 .upper_wrapper__service_about {
   gap: 30px;
   display: flex;
