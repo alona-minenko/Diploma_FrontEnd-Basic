@@ -35,22 +35,22 @@
                 margin-bottom: 10px;
 
                 h3 {
-                    @include h3-caps($active_regular_color);
+                    @include h3-caps($active_link_regular_color);
                     transition: .2s ease-in;
                 }
 
                 svg {
-                    color: #24A3FF;
+                    color: $active_link_regular_color;
                     transition: .2s ease-in;
                 }
             }
 
             &-link:hover h3 {
-                color: $accent_color;
+                color: $accent_link_color;
             }
 
             &-link:hover svg {
-                color: $accent_color;
+                color: $accent_link_color;
             }
         }
     }
@@ -80,17 +80,17 @@
         }
 
         h3 {
-            @include h3($active_regular_color);
+            @include h3($active_link_regular_color);
             margin-bottom: 15px;
             transition: .3s ease-in;
 
             &:hover {
-                color: $accent_color;
+                color: $accent_link_color;
             }
         }
 
         p {
-            @include paragraph($white_color);
+            @include paragraph-regular($white_color);
         }
     }
 }

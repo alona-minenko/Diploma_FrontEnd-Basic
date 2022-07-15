@@ -28,13 +28,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 @media screen and (max-width: 650px) {
   .upper_wrapper {
     max-width: 1600px;
     width: calc(100% - 60px);
   }
 }
-
 .upper_wrapper__shadow {
   height: 20px;
   display: flex;
@@ -42,6 +42,7 @@ body {
   align-items: center;
   margin-bottom: 60px;
 }
+
 @media screen and (max-width: 650px) {
   .upper_wrapper__shadow {
     margin-bottom: 30px;
@@ -51,13 +52,20 @@ body {
   height: 10px;
   border-radius: 0px 0px 12px 12px;
 }
+
 .upper_wrapper__shadow1 {
   background: #CACADB;
   width: calc(100% - 40px);
 }
+
 .upper_wrapper__shadow2 {
   background: #E7E7F2;
   width: calc(100% - 80px);
 }
+
+/*# sourceMappingURL=styles.scss.map */
+/*# sourceMappingURL=styles.scss.map */
+/*# sourceMappingURL=styles.scss.map */
+/*# sourceMappingURL=styles.scss.map */
 
 /*# sourceMappingURL=styles.css.map */

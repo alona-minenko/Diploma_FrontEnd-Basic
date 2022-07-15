@@ -39,28 +39,29 @@
                 margin-bottom: 10px;
 
                 h3 {
-                    @include h3-caps($active_regular_color);
+                    @include h3-caps($active_link_regular_color);
                     transition: .2s ease-in;
                 }
 
                 svg {
-                    color: #24A3FF;
+                    color: $active_link_regular_color;
                     transition: .2s ease-in;
                 }
             }
 
             &-link:hover h3 {
-                color: $accent_color;
+                color: $accent_link_color;
             }
 
             &-link:hover svg {
-                color: $accent_color;
+                color: $accent_link_color;
             }
         }
 
         &-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(281.33px, 1fr));
+            // grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             // height: 430px;
             height: fit-content;
             gap: 30px;
@@ -118,27 +119,22 @@
                     gap: 15px;
 
                     h4 {
-                        @include h4($active_regular_color);
+                        @include h4($active_link_regular_color);
                         transition: .2s ease-in;
                     }
 
                     h4:hover {
-                        color: $accent_color;
+                        color: $accent_link_color;
                     }
 
                     h3 {
-                        font-weight: 700;
-                        font-size: 12px;
-                        line-height: 15px;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                        color: $grey_text_color;
+                        @include h3-caps($grey_text_color,$font-size:12px, $line-height:15px);
                     }
 
                     &-separator {
                         width: 100%;
                         height: 4px;
-                        background: #E6E6F0;
+                        background: $grey_separator_color;
                     }
 
                     p {

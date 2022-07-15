@@ -1,69 +1,70 @@
-@import "_variables";
-
+@import "../styles/_variables";
 
 *, html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    background-color: #FFFFFF;
+  background-color: $white_color;
 }
 
 .main_wrapper-1 {
-    // width: 100vw;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background: $gradient_supersoft_color;
-    border-radius: 0px 0px 12px 12px;
-    position: relative;
-    padding-bottom: 60px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: $gradient_supersoft_color;
+  border-radius: 0px 0px 12px 12px;
+  position: relative;
+  padding-bottom: 60px;
 }
-
 
 .upper_wrapper {
-    @include main-content-width($margin-desctop);
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (max-width:650px) {
-        @include main-content-width($margin-mobile-min);
-    }
+  @include main-content-width($margin-desctop);
+  display: flex;
+  flex-direction: column;
 }
 
+@media screen and (max-width: 650px) {
+  .upper_wrapper {
+    @include main-content-width($margin-mobile-min);
+  }
+}
 .upper_wrapper__shadow {
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: $margin-desctop;
-
-    @media screen and (max-width:650px) {
-        margin-bottom: $margin-mobile-min;
-    }
-
-    div {
-        height: 10px;
-        border-radius: 0px 0px 12px 12px;
-    }
-
-    &1 {
-        background: #CACADB;
-        width: calc(100% - 20px*2);
-    }
-
-    &2 {
-        background: #E7E7F2;
-        width: calc(100% - 40px*2);
-    }
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $margin-desctop;
 }
 
+@media screen and (max-width: 650px) {
+  .upper_wrapper__shadow {
+    margin-bottom: $margin-mobile-min;
+  }
+}
+.upper_wrapper__shadow div {
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+}
 
+.upper_wrapper__shadow1 {
+  background: #CACADB;
+  width: calc(100% - 40px);
+}
 
+.upper_wrapper__shadow2 {
+  background: #E7E7F2;
+  width: calc(100% - 80px);
+}
 
+/*# sourceMappingURL=styles.scss.map */
+/*# sourceMappingURL=styles.scss.map */
+/*# sourceMappingURL=styles.scss.map */
+
+/*# sourceMappingURL=styles.scss.map */

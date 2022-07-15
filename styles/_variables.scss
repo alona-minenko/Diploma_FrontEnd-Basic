@@ -6,9 +6,9 @@ $main_soft_color: #686887;
 $black_color: #000000;
 $white_color: #FFFFFF;
 
-$accent_color: #F0145A;
+$accent_link_color: #F0145A;
+$active_link_regular_color: #24A3FF;
 
-$active_regular_color: #24A3FF;
 $active_hover_color: #0085FF;
 $active_active_color: #006CCF;
 
@@ -22,6 +22,7 @@ $gradient_soft_color: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, 
 $gradient_red_color: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
 $gradient_supersoft_color: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 $gradient_red_text_color: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+$gradietn_red_text_reversed_color: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
 
 
 // Backgroud color partners
@@ -45,97 +46,114 @@ ultimatecard_color:#000000,
 
 // Link
 
-@mixin link-regular {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 125%;
-    color: $active_regular_color;
-}
+// @mixin link-regular {
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 125%;
+//     color: $active_regular_color;
+// }
 
-@mixin link-hover {
-    @include link-hover();
-    color: $accent_color;
-}
+// @mixin link-hover {
+//     @include link-hover();
+//     color: $accent_color;
+// }
 
 
 
 
 // Text
 
-@mixin h1 ($gradient_color){
+@mixin h1 ($gradient_color,$font-size:38px, $line-height:46px){
     font-style: normal;
     font-weight: 700;
-    font-size: 38px;
-    line-height: 46px;
+    font-size: $font-size;
+    line-height: $line-height;
     background: $gradient_color;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 
-@mixin h2($color) {
+@mixin h2($color,$font-size:30px, $line-height:37px) {
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 37px;
+    font-size: $font-size;
+    line-height: $line-height;
     color: $color;
 }
 
-@mixin h3($color) {
+@mixin h3($color,$font-size:22px,$line-height:27px) {
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: $font-size;
+    line-height: $line-height;
     color: $color;
 }
 
-@mixin h3-caps($color) {
+@mixin h3-caps($color,$font-size:14px,$line-height:17px) {
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: $font-size;
+    line-height: $line-height;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color;
 }
 
-@mixin h4 ($color){
+@mixin h4 ($color, $font-size:16px, $line-height:20px) {
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: $font-size;
+    line-height: $line-height;
     color: $color;
 }
 
-@mixin paragraph ($color) {
+@mixin paragraph-big ($color,$font-size:19px, $line-height:158%) {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 162%;
+    font-size: $font-size;
+    line-height: $line-height; //line-height: 30px;
     color: $color;
 }
 
-@mixin paragraph-small($color) {
+// @mixin paragraph ($color,$font-size:16px, $line-height:162%) {
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: $font-size;
+//     line-height: $line-height; 
+//     color: $color;
+// }
+
+@mixin paragraph-regular ($color,$font-size:16px, $line-height:162%) {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 157%;
+    font-size: $font-size;
+    line-height: $line-height; //line-height: 26px;
     color: $color;
 }
 
-@mixin unordered-list($color){
+@mixin paragraph-small($color, $font-size:14px, $line-height:157%) {
+    font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 144%;
+    font-size: $font-size;
+    line-height: $line-height; //line-height: 22px;
+    color: $color;
+}
+
+@mixin unordered-list($color,$font-size:18px, $line-height:144%){
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size;
+    line-height: $line-height; //line-height: 26px;
     color: $color
 }
 
-@mixin ordered-list($color) {
+@mixin ordered-list($color,$font-size: 18px, $line-height: 144%) {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 144%;    
+    font-size: $font-size;
+    line-height: $line-height;
     color: $color;
 }
 

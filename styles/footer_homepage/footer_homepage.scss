@@ -1,0 +1,9 @@
+@import "../footer_general/footer_general";
+
+.footer__content-text__copyright {
+    @media screen and (max-width:760px) {
+        float: none;
+        margin: 0px;
+        text-align: center;
+    }
+}
