@@ -69,16 +69,16 @@
             @media screen and (max-width:1023.5px) {
                 // grid-template-columns: 1fr 1fr;
                 // grid-template-rows: 1fr 1fr;
-                grid-template-areas:
-                    "footer_recommended__info-cards-wrapper-1 footer_recommended__info-cards-wrapper-2"
-                    "footer_recommended__info-cards-wrapper-3 footer_recommended__info-cards-wrapper-3";
+                // grid-template-areas:
+                //     "footer_recommended__info-cards-wrapper-1 footer_recommended__info-cards-wrapper-2"
+                //     "footer_recommended__info-cards-wrapper-3 footer_recommended__info-cards-wrapper-3";
             }
 
             @media screen and (max-width:693px) {
-                grid-template-areas:
-                    "footer_recommended__info-cards-wrapper-1"
-                    "footer_recommended__info-cards-wrapper-2"
-                    "footer_recommended__info-cards-wrapper-3";
+                // grid-template-areas:
+                //     "footer_recommended__info-cards-wrapper-1"
+                //     "footer_recommended__info-cards-wrapper-2"
+                //     "footer_recommended__info-cards-wrapper-3";
             }
 
             &-wrapper {
@@ -87,19 +87,20 @@
 
                 &-1 {
                     @media screen and (max-width:1023.5px) {
-                        grid-area: footer_recommended__info-cards-wrapper-1;
+                        // grid-area: footer_recommended__info-cards-wrapper-1;
                     }
                 }
 
                 &-2 {
                     @media screen and (max-width:1023.5px) {
-                        grid-area: footer_recommended__info-cards-wrapper-2;
+                        // grid-area: footer_recommended__info-cards-wrapper-2;
                     }
                 }
 
                 &-3 {
                     @media screen and (max-width:1023.5px) {
-                        grid-area: footer_recommended__info-cards-wrapper-3;
+                        // grid-area: footer_recommended__info-cards-wrapper-3;
+                        grid-column: 1 / -1;
                     }
                 }
 

@@ -1,0 +1,104 @@
+@import "../_variables";
+
+
+.team {
+    &__h1 {
+        max-width: 1360px;
+        @include h1($gradient_red_text_color);
+        width: calc(100% - 360px);
+        height: fit-content;
+        margin: $margin-desctop auto $margin-desctop;
+
+        @media screen and (max-width: 1020px) {
+            width: calc(100% - $margin-desctop*2);
+        }
+
+        @media screen and (max-width: 650px) {
+            width: calc(100% - $margin-mobile-min*2);
+            margin: $margin-mobile-min auto $margin-mobile-min;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+        }
+    }
+
+    &__info_card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $gap-desctop;
+        margin: $margin-desctop auto $margin-desctop;
+        @include main-content-width($margin-desctop);
+
+        @media screen and (max-width: 1020px) {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        }
+
+        @media screen and (max-width: 650px) {
+            width: calc(100% - $margin-mobile-min*2);
+            margin: $margin-mobile-min auto $margin-desctop;
+            gap: $gap-mobile-min;
+            grid-template-columns: 1fr;
+        }
+
+        img {
+            border-radius: 12px;
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        a {
+            margin-bottom: 5px;
+            transition: 0.2s ease-in;
+            position: relative;
+            display: block;
+
+            h4 {
+                @include h4 ($main_regular_color);
+                transition: 0.2s ease-in;
+            }    
+            
+            div {
+                background-color: $grey_bg_color;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                right: 0px;
+                top: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;                
+                transition: 0.2s ease-in;
+            }
+
+            svg {
+                color: $active_link_regular_color;
+                transition: 0.2s ease-in;
+
+                @media screen and (max-width:600px) {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        a:hover {
+            h4 {
+                color: $accent_link_color;
+            }
+
+            div {
+                background-color: $grey_bg_alt_color;
+            }
+
+            svg {
+                color: $accent_link_color
+            }           
+        }       
+    }
+
+        p {
+            @include paragraph-small($grey_text_color);
+        }
+    }    

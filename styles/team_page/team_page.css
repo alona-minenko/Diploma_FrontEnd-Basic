@@ -1,0 +1,109 @@
+.team__h1 {
+  max-width: 1360px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: calc(100% - 360px);
+  height: fit-content;
+  margin: 60px auto 60px;
+}
+@media screen and (max-width: 1020px) {
+  .team__h1 {
+    width: calc(100% - 120px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .team__h1 {
+    width: calc(100% - 60px);
+    margin: 30px auto 30px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+.team__info_card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin: 60px auto 60px;
+  max-width: 1600px;
+  width: calc(100% - 120px);
+}
+@media screen and (max-width: 1020px) {
+  .team__info_card {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+@media screen and (max-width: 650px) {
+  .team__info_card {
+    width: calc(100% - 60px);
+    margin: 30px auto 60px;
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+}
+.team__info_card img {
+  border-radius: 12px;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.team__info_card a {
+  margin-bottom: 5px;
+  transition: 0.2s ease-in;
+  position: relative;
+  display: block;
+}
+.team__info_card a h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+  transition: 0.2s ease-in;
+}
+.team__info_card a div {
+  background-color: #F5F5FA;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: 0.2s ease-in;
+}
+.team__info_card a svg {
+  color: #24A3FF;
+  transition: 0.2s ease-in;
+}
+@media screen and (max-width: 600px) {
+  .team__info_card a svg {
+    transform: rotate(90deg);
+  }
+}
+.team__info_card a:hover h4 {
+  color: #F0145A;
+}
+.team__info_card a:hover div {
+  background-color: #EDEDF7;
+}
+.team__info_card a:hover svg {
+  color: #F0145A;
+}
+.team p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  color: #B3B3BA;
+}
+
+/*# sourceMappingURL=team_page.css.map */

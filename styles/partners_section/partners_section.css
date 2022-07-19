@@ -34,7 +34,7 @@
     margin: 0px auto;
   }
 }
-@media screen and (max-width: 531px) {
+@media screen and (max-width: 544px) {
   .main_info__partners .desctop {
     display: none;
   }

@@ -252,10 +252,6 @@
         margin: 0 auto;
         gap: 30px;
 
-        @media screen and (max-width:650px) {
-            width: calc(100% - $margin-mobile-min*2);
-        }
-
         &-h3-caps {
             @include h3-caps($main_regular_color);
             text-align: center;

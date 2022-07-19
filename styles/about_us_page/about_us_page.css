@@ -237,11 +237,6 @@
   margin: 0 auto;
   gap: 30px;
 }
-@media screen and (max-width: 650px) {
-  .achievements-footer__content {
-    width: calc(100% - 60px);
-  }
-}
 .achievements-footer__content-h3-caps {
   font-style: normal;
   font-weight: 700;
