@@ -117,13 +117,6 @@ ultimatecard_color:#000000,
     color: $color;
 }
 
-// @mixin paragraph ($color,$font-size:16px, $line-height:162%) {
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: $font-size;
-//     line-height: $line-height; 
-//     color: $color;
-// }
 
 @mixin paragraph-regular ($color,$font-size:16px, $line-height:162%) {
     font-style: normal;
