@@ -5,16 +5,16 @@
     &__h1 {
         max-width: 1360px;
         @include h1($gradient_red_text_color);
-        width: calc(100% - 360px);
+        width: calc(100vw - 360px);
         height: fit-content;
         margin: $margin-desctop auto $margin-desctop;
 
         @media screen and (max-width: 1020px) {
-            width: calc(100% - $margin-desctop*2);
+            width: calc(100vw - $margin-desctop*2);
         }
 
         @media screen and (max-width: 650px) {
-            width: calc(100% - $margin-mobile-min*2);
+            width: calc(100vw - $margin-mobile-min*2);
             margin: $margin-mobile-min auto $margin-mobile-min;
             font-weight: 700;
             font-size: 30px;
@@ -34,7 +34,7 @@
         }
 
         @media screen and (max-width: 650px) {
-            width: calc(100% - $margin-mobile-min*2);
+            width: calc(100vw - $margin-mobile-min*2);
             margin: $margin-mobile-min auto $margin-desctop;
             gap: $gap-mobile-min;
             grid-template-columns: 1fr;

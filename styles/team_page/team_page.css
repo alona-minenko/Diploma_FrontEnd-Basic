@@ -7,18 +7,18 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: calc(100% - 360px);
+  width: calc(100vw - 360px);
   height: fit-content;
   margin: 60px auto 60px;
 }
 @media screen and (max-width: 1020px) {
   .team__h1 {
-    width: calc(100% - 120px);
+    width: calc(100vw - 120px);
   }
 }
 @media screen and (max-width: 650px) {
   .team__h1 {
-    width: calc(100% - 60px);
+    width: calc(100vw - 60px);
     margin: 30px auto 30px;
     font-weight: 700;
     font-size: 30px;
@@ -40,7 +40,7 @@
 }
 @media screen and (max-width: 650px) {
   .team__info_card {
-    width: calc(100% - 60px);
+    width: calc(100vw - 60px);
     margin: 30px auto 60px;
     gap: 30px;
     grid-template-columns: 1fr;
