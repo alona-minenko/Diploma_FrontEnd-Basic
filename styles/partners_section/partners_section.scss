@@ -37,6 +37,12 @@
 
     a {
         height: 120px;
+        transition: .2s ease-in;
+    }
+
+    a:hover {
+        transform: scale(1.2);
+        border-radius: 12px;
     }
 
     @each $logo in hillel,
@@ -56,4 +62,8 @@
             background-color: map-get($colors, #{$logo}_color);
         }
     }
+}
+
+.main_info__partners:hover {
+    overflow: unset;
 }

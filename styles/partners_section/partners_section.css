@@ -41,6 +41,11 @@
 }
 .main_info__partners a {
   height: 120px;
+  transition: 0.2s ease-in;
+}
+.main_info__partners a:hover {
+  transform: scale(1.2);
+  border-radius: 12px;
 }
 .main_info__partners-hillel {
   background: url("../../images/partners/hillel.svg") no-repeat center;
@@ -89,6 +94,10 @@
 .main_info__partners-ultimatecard {
   background: url("../../images/partners/ultimatecard.svg") no-repeat center;
   background-color: #000000;
+}
+
+.main_info__partners:hover {
+  overflow: unset;
 }
 
 /*# sourceMappingURL=partners_section.css.map */

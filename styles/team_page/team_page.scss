@@ -27,7 +27,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: $gap-desctop;
         margin: $margin-desctop auto $margin-desctop;
-        @include main-content-width($margin-desctop);
+        @include main-content-width($margin-desctop);        
 
         @media screen and (max-width: 1020px) {
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -38,6 +38,16 @@
             margin: $margin-mobile-min auto $margin-desctop;
             gap: $gap-mobile-min;
             grid-template-columns: 1fr;
+        }
+
+        &>div {
+            transition: .3s ease-in;
+        }
+
+        &>div:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px 10px $grey_text_color;
+            border-radius: 12px 12px 5px 5px;
         }
 
         img {

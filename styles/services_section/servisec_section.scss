@@ -45,12 +45,16 @@
                 }
             }
 
-            &-link:hover h3 {
-                color: $accent_link_color;
-            }
+            &-link:hover {
+                h3 {
+                    color: $accent_link_color;
+                    transform: scale(1.1) translateY(-5px) translateX(-5px);
+                }
 
-            &-link:hover svg {
-                color: $accent_link_color;
+                svg {
+                    color: $accent_link_color;
+                    transform: scale(1.1) translateY(-5px) translateX(5px);
+                }
             }
         }
     }
@@ -86,6 +90,7 @@
 
             &:hover {
                 color: $accent_link_color;
+                transform: scale(1.2) translateX(50px);
             }
         }
 

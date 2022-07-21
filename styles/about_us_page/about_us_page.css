@@ -72,6 +72,10 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: 0.3s ease-in;
+}
+.main__about-upper_advantages-list h1:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .main__about-upper_advantages-list p {
   width: 354px;

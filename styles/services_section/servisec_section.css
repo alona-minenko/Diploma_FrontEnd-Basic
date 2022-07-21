@@ -50,9 +50,11 @@
 }
 .upper_wrapper__services_name-link:hover h3 {
   color: #F0145A;
+  transform: scale(1.1) translateY(-5px) translateX(-5px);
 }
 .upper_wrapper__services_name-link:hover svg {
   color: #F0145A;
+  transform: scale(1.1) translateY(-5px) translateX(5px);
 }
 .upper_wrapper__services_card {
   display: grid;
@@ -128,6 +130,7 @@
 }
 .upper_wrapper__services_card h3:hover {
   color: #F0145A;
+  transform: scale(1.2) translateX(50px);
 }
 .upper_wrapper__services_card p {
   font-style: normal;

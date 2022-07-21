@@ -51,6 +51,7 @@ header .header__logo_main_slash-page-name {
   position: absolute;
   top: 928px;
   left: calc(50% - 21px);
+  border-radius: 50%;
 }
 @media screen and (max-width: 1440px) {
   .upper_wrapper__background_logo_scroll_svg {
@@ -74,6 +75,8 @@ header .header__logo_main_slash-page-name {
 }
 .upper_wrapper__background_logo_scroll_svg:hover {
   color: #F0145A;
+  transform: scale(1.2) translateY(21px);
+  box-shadow: 0 0 14px 3px rgb(221, 221, 221);
 }
 .upper_wrapper__background_h1 {
   width: 552px;
@@ -343,9 +346,11 @@ header .header__logo_main_slash-page-name {
 }
 .main_info__team_text-link:hover h3 {
   color: #F0145A;
+  transform: scale(1.1) translateY(-5px) translateX(-5px);
 }
 .main_info__team_text-link:hover svg {
   color: #F0145A;
+  transform: scale(1.1) translateY(-5px) translateX(5px);
 }
 
 /*# sourceMappingURL=homepage.css.map */

@@ -46,6 +46,14 @@
     grid-template-columns: 1fr;
   }
 }
+.team__info_card > div {
+  transition: 0.3s ease-in;
+}
+.team__info_card > div:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 10px #B3B3BA;
+  border-radius: 12px 12px 5px 5px;
+}
 .team__info_card img {
   border-radius: 12px;
   height: 400px;

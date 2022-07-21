@@ -49,6 +49,7 @@
         object-fit: cover;
         // grid-row: 1/span 2;
         grid-area: photo;
+        transition: 0.3s ease-in;
 
         @media screen and (max-width:1300px) {
             width: 300px;
@@ -63,6 +64,11 @@
             // grid-column: 1/ span 2;
             width: 315px;
             height: 375px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px 10px #b3b3ba;
         }
     }
 

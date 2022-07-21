@@ -1,8 +1,83 @@
 @import "../_variables";
 
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
     background: $grey_bg_color;
     height: fit-content;
     padding: 30px 0px 30px;
     margin-top: $margin-desctop;
+
+    &__switch {
+        // width: 233px;
+        height: 42px;
+        background-color: $grey_separator_color;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        gap: 2px;
+
+        &_button {
+            width: 105px;
+            height: 38px;
+            background-color: $grey_separator_color;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+            @include h4 ($main_regular_color);
+            text-align: center;
+            align-items: center;
+
+            &.active {
+                background-color: $white_color;
+            }
+        }
+
+        &_button:hover:not(.active) {
+            background-color: $grey_bg_color;
+        }
+    }
+
+    &__button-more {
+        width: 211px;
+        height: 56px;
+        padding: 18px 30px;
+        box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        background: $active_link_regular_color;
+        @include h4 ($white_color);
+        transition: 0.2s ease-in;
+
+        &:hover {
+            background: $active_hover_color;
+            box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        }
+    
+        &:active {
+            background: $active_active_color;
+            box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        }
+    }
+}
+
+.section_recommended__info-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    @media screen and (max-width:1023.5px) {
+        grid-template-columns: repeat(auto-fill, minmax(309px, 1fr));
+    }
+
+    &-wrapper-3 {
+        @media screen and (max-width:1023.5px) {
+            grid-column: auto;
+        }
+    }
 }

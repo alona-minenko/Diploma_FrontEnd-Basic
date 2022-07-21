@@ -58,6 +58,7 @@ header .header__logo_main_slash-page-name {
             position: absolute;
             top: calc-top-scroll-svg($background_logo_height-Desktop-HD);
             left: calc(50% - 42px/2);
+            border-radius: 50%;
 
             @media screen and (max-width:1440px) {
                 top: calc-top-scroll-svg($background_logo_height-Desktop-SD);
@@ -78,6 +79,8 @@ header .header__logo_main_slash-page-name {
 
         &_scroll_svg:hover {
             color: $accent_link_color;
+            transform: scale(1.2) translateY(21px);
+            box-shadow: 0 0 14px 3px rgba(221, 221, 221, 1);
         }
     }
 
@@ -349,11 +352,15 @@ header .header__logo_main_slash-page-name {
             }        
         }
 
-        &_text-link:hover h3 {
-            color: $accent_link_color;
-        }
+        &_text-link:hover {
+            h3 {
+                color: $accent_link_color;
+                transform: scale(1.1) translateY(-5px) translateX(-5px);
+            }
 
-        &_text-link:hover svg {
-            color: $accent_link_color;
+            svg {
+                color: $accent_link_color;
+                transform: scale(1.1) translateY(-5px) translateX(5px);
+            }
         }
     }

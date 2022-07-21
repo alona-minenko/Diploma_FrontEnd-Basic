@@ -98,6 +98,11 @@
 
                 h1 {
                     @include h1($gradient_red_text_color, $font-size:36px,$line-height:44px);
+                    transition: 0.3s ease-in;
+                }
+
+                h1:hover {
+                    transform: scale(1.2) translateX(10px);
                 }
 
                 p {    

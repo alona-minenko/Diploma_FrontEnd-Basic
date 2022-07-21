@@ -40,6 +40,7 @@
   border-radius: 12px;
   object-fit: cover;
   grid-area: photo;
+  transition: 0.3s ease-in;
 }
 @media screen and (max-width: 1300px) {
   .main__photo {
@@ -52,6 +53,10 @@
     width: 315px;
     height: 375px;
   }
+}
+.main__photo:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 10px #b3b3ba;
 }
 .main__card-header {
   height: fit-content;
