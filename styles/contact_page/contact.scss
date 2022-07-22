@@ -1,0 +1,111 @@
+@import "../_variables";
+
+.main {
+    max-width: 1360px;
+    width: calc(100% - 360px);
+    height: fit-content;
+    margin: 60px auto 60px;
+    display: grid;
+    gap: $gap-desctop;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+
+
+    @media screen and (max-width: 1300px) {
+        width: calc(100% - $margin-desctop*2);
+    }
+
+    @media screen and (max-width:760px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    @media screen and (max-width: 650px) {
+        width: calc(100% - $margin-mobile-min*2);
+        margin: $margin-mobile-min auto $margin-mobile-min;
+    }
+
+
+    &__contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        // max-width: 650px;
+
+        &_p {
+            @include paragraph-big ($main_regular_color, $font-size: 21px, $line-height: 143%);
+        }
+
+        &__separator {
+            width: 100%;
+            height: 4px;
+            background: $grey_separator_color;
+        }
+
+        &__contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: fit-content;
+
+            &_number, &_email {
+                @include paragraph-big ($main_alt_color, $font-size: 21px, $line-height: 143%);
+                transition: 0.2s ease-in;
+
+                &:hover {
+                    color: $accent_link_color;
+                }
+            }
+
+            &_email {
+                color: $active_link_regular_color;
+            }
+        }
+
+        &__fb {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            width: fit-content ;
+
+            &-a-svg {
+                color: $active_link_regular_color;
+                transition: 0.2s ease-in;
+                height: 38px;
+            }
+
+            &-a-p {
+                transition: 0.2s ease-in;
+                @include h3-caps($active_link_regular_color, $font-size: 12px, $line-height: 16px);
+            }
+        }
+
+        &__fb:hover {
+            a {
+                color: $accent_link_color;
+            }
+        }
+    }
+}
+
+
+.contact_form {
+    margin: 0;
+    position: unset; 
+    top: 0px;
+    left: 0px;
+    transform: unset;
+    // max-width: 650px;
+    width: unset;
+    box-shadow: none;
+
+    @media screen and (max-width: 690px) {
+        height: fit-content;
+    }
+
+    &__title {
+        h1 {
+            @include h1 ($gradient_red_text_color, $font-size: 30px, $line-height: 37px);
+            width: fit-content;
+        }
+    }
+}

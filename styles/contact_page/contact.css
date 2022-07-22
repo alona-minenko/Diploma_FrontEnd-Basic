@@ -1,0 +1,113 @@
+.main {
+  max-width: 1360px;
+  width: calc(100% - 360px);
+  height: fit-content;
+  margin: 60px auto 60px;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+}
+@media screen and (max-width: 1300px) {
+  .main {
+    width: calc(100% - 120px);
+  }
+}
+@media screen and (max-width: 760px) {
+  .main {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media screen and (max-width: 650px) {
+  .main {
+    width: calc(100% - 60px);
+    margin: 30px auto 30px;
+  }
+}
+.main__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main__contact-info_p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 143%;
+  color: #323264;
+}
+.main__contact-info__separator {
+  width: 100%;
+  height: 4px;
+  background: #E6E6F0;
+}
+.main__contact-info__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+}
+.main__contact-info__contacts_number, .main__contact-info__contacts_email {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 143%;
+  color: #46466E;
+  transition: 0.2s ease-in;
+}
+.main__contact-info__contacts_number:hover, .main__contact-info__contacts_email:hover {
+  color: #F0145A;
+}
+.main__contact-info__contacts_email {
+  color: #24A3FF;
+}
+.main__contact-info__fb {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  width: fit-content;
+}
+.main__contact-info__fb-a-svg {
+  color: #24A3FF;
+  transition: 0.2s ease-in;
+  height: 38px;
+}
+.main__contact-info__fb-a-p {
+  transition: 0.2s ease-in;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+}
+.main__contact-info__fb:hover a {
+  color: #F0145A;
+}
+
+.contact_form {
+  margin: 0;
+  position: unset;
+  top: 0px;
+  left: 0px;
+  transform: unset;
+  width: unset;
+  box-shadow: none;
+}
+@media screen and (max-width: 690px) {
+  .contact_form {
+    height: fit-content;
+  }
+}
+.contact_form__title h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+/*# sourceMappingURL=contact.css.map */

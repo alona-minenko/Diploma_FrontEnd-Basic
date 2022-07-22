@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/header_light/header_light.css">
+    <link rel="stylesheet" href="../styles/contact__form/contact_form.css">
     <link rel="stylesheet" href="../styles/recommended_section/recommended_section.css">
     <link rel="stylesheet" href="../styles/footer/footer.css">
     <link rel="stylesheet" href="../styles/service_entry_page/service_entry_page.css">
@@ -83,7 +84,7 @@
                                 <div class="header__right_side_nav_underline"></div>
                             </li>
                             <li class="header__right_side_nav_menu5">
-                                <a href="#">contact</a>
+                                <a href="../pages/contact_page.html">contact</a>
                                 <div class="header__right_side_nav_underline"></div>
                             </li>
                         </ul>
@@ -106,12 +107,12 @@
                     technology in Ukraine.</p>
                 <a href="#open-form-modal" class="upper_wrapper__service_name-button">Free consultation</a>
                 <div class="upper_wrapper__service_name-form-modal-window" id="open-form-modal">
-                    <form action="https://fom.in.ua/echo" method="get">
-                        <div class="upper_wrapper__service_name-form-modal-window-title">
+                    <form action="https://fom.in.ua/echo" method="get" class="contact_form">
+                        <div class="contact_form__title">
                             <h1>We would like to help you</h1>
-                            <a href="#" title="Close" class="upper_wrapper__service_name-form-modal-window-close"></a>
+                            <a href="#" title="Close" class="contact_form__close"></a>
                         </div>
-                        <div class="upper_wrapper__service_name-form-modal-window-upper">
+                        <div class="contact_form__upper">
                             <div class="form__input-upper-text">
                                 <input type="text" name="name" id="name" required placeholder="Name">
                             </div>
@@ -120,7 +121,7 @@
                                     class="form__input-text-label_message" required placeholder="Message"></textarea>
                             </div>
                         </div>
-                        <div class="upper_wrapper__service_name-form-modal-window-lower">
+                        <div class="contact_form__lower">
                             <h3>How to answer you?</h3>
                             <div class="form__input-lower-text">
                                 <input type="phone" name="phone" id="phone" class="form__inputtext-phone" required
