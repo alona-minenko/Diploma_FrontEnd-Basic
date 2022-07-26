@@ -64,11 +64,18 @@
             // grid-column: 1/ span 2;
             width: 315px;
             height: 375px;
-        }
+        }        
 
         &:hover {
             transform: scale(1.2);
             box-shadow: 0 0 20px 10px #b3b3ba;
+        }
+
+        @media screen and (max-width: 650px) {
+            &:hover {
+                transform: none;
+                box-shadow: none;
+            }
         }
     }
 

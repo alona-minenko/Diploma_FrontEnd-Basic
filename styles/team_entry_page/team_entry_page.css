@@ -58,6 +58,12 @@
   transform: scale(1.2);
   box-shadow: 0 0 20px 10px #b3b3ba;
 }
+@media screen and (max-width: 650px) {
+  .main__photo:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
 .main__card-header {
   height: fit-content;
   width: fit-content;
