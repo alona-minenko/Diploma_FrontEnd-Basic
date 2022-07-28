@@ -50,7 +50,7 @@
   transition: 0.3s ease-in;
 }
 .team__info_card > div:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   box-shadow: 0 0 20px 10px #B3B3BA;
   border-radius: 12px 12px 5px 5px;
 }

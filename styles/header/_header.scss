@@ -248,6 +248,7 @@
                 height: 32px;
                 cursor: pointer;
                 display: none;
+                z-index: 50;
 
                 &:active {
                     background-color: $grey_separator_color;

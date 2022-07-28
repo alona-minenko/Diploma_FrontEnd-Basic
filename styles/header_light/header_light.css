@@ -207,6 +207,7 @@ header .header__right_side_nav_menu .active {
   height: 32px;
   cursor: pointer;
   display: none;
+  z-index: 50;
 }
 .header__right_side_burger:active {
   background-color: #E6E6F0;

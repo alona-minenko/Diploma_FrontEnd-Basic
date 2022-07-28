@@ -1,0 +1,182 @@
+@import "../_variables";
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1360px;
+    width: calc(100vw - 360px);
+    height: fit-content;
+    margin: $margin-desctop auto $margin-desctop;
+    gap: 30px;
+
+    @media screen and (max-width: 1300px) {
+        width: calc(100vw - $margin-desctop*2);
+    }
+
+    @media screen and (max-width: 650px) {
+        width: calc(100vw - $margin-mobile-min*2);
+        margin: $margin-mobile-min auto $margin-mobile-min;
+    }
+
+    &__img {
+        width: 100%;
+        height: 500px;
+        border-radius: 12px;
+        object-fit: cover;
+
+        @media screen and (max-width:650px) {
+            height: 300px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;        
+
+        &-h2 {
+            @include h2($main_regular_color);
+
+            @media screen and (max-width:650px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+        &-p {
+            @include h3-caps($grey_text_color, $font-size: 12px, $line-height: 15px);
+        }
+    }
+
+    &__separator {
+        width: 100%;
+        height: 4px;
+        background: $grey_separator_color;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        p {
+            @include paragraph-regular ($black_color);
+        }
+
+        &-h1 {
+            @include h1 ($gradient_red_text_color);
+
+            @media screen and (max-width:650px) {
+                font-size: 30px;
+                line-height: 37px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-h3 {
+                @include h3($main_alt_color);
+
+                @media screen and (max-width:650px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            ol {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                list-style: none;
+                list-style-position: inside;
+                counter-reset: my-list;
+
+                li {
+                    padding-left: 40px;
+                    @include unordered-list($black_color);
+                    counter-increment: my-list;
+                    position: relative;
+                    
+                    &:before {
+                        content: counter(my-list) '.';
+                        position: absolute;
+                        width: 30px;
+                        height: 26px;
+                        text-align: right;
+                        left: 0px;
+                        @include h3($accent_link_color, $font-size: 18px, $line-height: 26px);
+                    }
+                }
+            }
+        }
+
+        &-img-center {            
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;      
+            align-items: center;
+
+            img {
+                width: 640px;
+                height: 398px;  
+                
+                @media screen and (max-width:720px) {
+                    width: 315px;
+                    height: 195.89px;
+                }
+            }    
+            
+            p {
+                @include paragraph-small($grey_text_color);
+                text-align: center;
+            }
+        }
+
+        &-text-block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-h3 {
+                @include h3($main_regular_color);
+
+                @media screen and (max-width:650px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        &-links {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            width: 146px;
+            height: 42px;
+
+            a {
+                padding: 9px;
+                width: 42px;
+                height: 42px;
+                border-radius: 12px;
+                background: $grey_bg_color;
+                transition: 0.2s ease-in;
+            }
+
+            a:hover {
+                background: $grey_bg_alt_color;
+            }
+        }
+    }
+
+
+
+
+
+
+
+}
