@@ -18,7 +18,7 @@
 @media screen and (max-width: 1020px) {
   .main {
     column-gap: 30px;
-    grid-template-areas: "photo card-header" "photo card-header" "card-info card-info";
+    grid-template-areas: "photo card-header" "card-info card-info";
   }
 }
 @media screen and (max-width: 760px) {

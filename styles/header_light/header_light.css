@@ -357,7 +357,6 @@ header .header__right_side_nav_menu .active {
   .header-wrapper {
     padding: 10px 0px 0px 0px;
     width: 100%;
-    /* width: calc(100% - 30px); */
   }
 }
 

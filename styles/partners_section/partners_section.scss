@@ -10,7 +10,6 @@
 .main_info__partners {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     max-width: 1720px;
     height: fit-content;
     border-radius: 12px;

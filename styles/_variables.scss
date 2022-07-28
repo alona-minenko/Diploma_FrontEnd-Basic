@@ -44,24 +44,6 @@ ultimatecard_color:#000000,
 
 
 
-// Link
-
-// @mixin link-regular {
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 125%;
-//     color: $active_regular_color;
-// }
-
-// @mixin link-hover {
-//     @include link-hover();
-//     color: $accent_color;
-// }
-
-
-
-
 // Text
 
 @mixin h1 ($gradient_color,$font-size:38px, $line-height:46px){

@@ -1,18 +1,12 @@
 @import "../_variables";
 
 .section_recommended {
-    // width: 100vw;
     background: $grey_bg_color;
     height: fit-content;
     padding-top: 30px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
 
     &__info {
         @include main-content-width($margin-desctop);
-        // display: flex;
-        // flex-direction: column;
         margin: 0 auto;
 
         @media screen and (max-width:650px) {
@@ -65,25 +59,16 @@
         &-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(281.33px, 1fr));
-            // grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            // height: 430px;
             height: fit-content;
             gap: 30px;
 
             @media screen and (max-width:1023.5px) {
-                // grid-template-columns: 1fr 1fr;
-                // grid-template-rows: 1fr 1fr;
-                // grid-template-areas:
-                //     "footer_recommended__info-cards-wrapper-1 footer_recommended__info-cards-wrapper-2"
-                //     "footer_recommended__info-cards-wrapper-3 footer_recommended__info-cards-wrapper-3";
             }
 
             @media screen and (max-width:693px) {
-                // grid-template-areas:
-                //     "footer_recommended__info-cards-wrapper-1"
-                //     "footer_recommended__info-cards-wrapper-2"
-                //     "footer_recommended__info-cards-wrapper-3";
             }
+
+
 
             &-wrapper {
                 background-color: $white_color;
@@ -91,19 +76,16 @@
 
                 &-1 {
                     @media screen and (max-width:1023.5px) {
-                        // grid-area: footer_recommended__info-cards-wrapper-1;
                     }
                 }
 
                 &-2 {
                     @media screen and (max-width:1023.5px) {
-                        // grid-area: footer_recommended__info-cards-wrapper-2;
                     }
                 }
 
                 &-3 {
                     @media screen and (max-width:1023.5px) {
-                        // grid-area: footer_recommended__info-cards-wrapper-3;
                         grid-column: 1 / -1;
                     }
                 }
@@ -111,8 +93,8 @@
 
                 img {
                     border-radius: 8px 8px 0px 0px;
-                    width: 100%;
                     height: 200px;
+                    width: 100%;
                     object-fit: cover;
                     transition: .2s ease-in;
                 }

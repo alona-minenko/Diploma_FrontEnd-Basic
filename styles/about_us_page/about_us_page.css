@@ -268,6 +268,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s ease-in;
+}
+.achievements-footer__content-cards a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 5px #b3b3ba;
 }
 @media screen and (max-width: 760px) {
   .achievements-footer__content-cards a {

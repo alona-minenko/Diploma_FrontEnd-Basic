@@ -16,7 +16,7 @@
 @media screen and (max-width: 690px) {
   .contact_form {
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
   }
 }
 .contact_form input {

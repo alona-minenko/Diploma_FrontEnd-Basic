@@ -78,6 +78,10 @@
   background: #FFFFFF;
   border-radius: 24px;
   margin-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+.upper_wrapper__services_card-1-svg:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .upper_wrapper__services_card-2-svg {
   padding: 14px;
@@ -86,6 +90,10 @@
   background: #FFFFFF;
   border-radius: 24px;
   margin-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+.upper_wrapper__services_card-2-svg:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .upper_wrapper__services_card-3-svg {
   padding: 14px;
@@ -94,6 +102,10 @@
   background: #FFFFFF;
   border-radius: 24px;
   margin-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+.upper_wrapper__services_card-3-svg:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .upper_wrapper__services_card-4-svg {
   padding: 14px;
@@ -102,6 +114,10 @@
   background: #FFFFFF;
   border-radius: 24px;
   margin-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+.upper_wrapper__services_card-4-svg:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .upper_wrapper__services_card-5-svg {
   padding: 14px;
@@ -110,6 +126,10 @@
   background: #FFFFFF;
   border-radius: 24px;
   margin-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+.upper_wrapper__services_card-5-svg:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .upper_wrapper__services_card-6-svg {
   padding: 14px;
@@ -118,6 +138,10 @@
   background: #FFFFFF;
   border-radius: 24px;
   margin-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+.upper_wrapper__services_card-6-svg:hover {
+  transform: scale(1.2) translateX(10px);
 }
 .upper_wrapper__services_card h3 {
   font-style: normal;
@@ -140,4 +164,4 @@
   color: #FFFFFF;
 }
 
-/*# sourceMappingURL=servisec_section.css.map */
+/*# sourceMappingURL=services_section.css.map */

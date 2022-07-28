@@ -68,12 +68,10 @@
                 "header__right_side_nav header__right_side_nav";
             grid-row-gap: 30px;
             grid-template-rows: 25px 60px 25px;
-            // grid-template-columns: 1fr 1fr;
             grid-template-columns: repeat(auto-fit, minmax(213px, 1fr));
         }
 
         @media screen and (max-width:650px) {
-            // padding: 10px 0px 0px 0px;
             grid-template-areas:
                 "header__right_side_contacts header__right_side_contacts"
                 "header__logo_main header__right_side_burger";
@@ -145,19 +143,6 @@
         }
 
         &__right_side {
-            // display: flex;
-            // flex-direction: column;
-            // align-items: flex-end;
-            // padding: 0px;
-            // gap: 16px;
-            // width: 478px;
-            // height: 66px;
-            // z-index: 50;
-
-            // a, p {
-            //     color: $white_color;
-            // }
-
             &_contacts {
                 display: flex;
                 align-items: center;

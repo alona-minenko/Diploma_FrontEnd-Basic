@@ -17,6 +17,18 @@
   background: #24A3FF;
   opacity: 0.6;
 }
+.paginator-4:hover:not(.paginator-active) {
+  background: #24A3FF;
+  opacity: 0.6;
+}
+.paginator-5:hover:not(.paginator-active) {
+  background: #24A3FF;
+  opacity: 0.6;
+}
+.paginator-6:hover:not(.paginator-active) {
+  background: #24A3FF;
+  opacity: 0.6;
+}
 .paginator button {
   border: none;
   border-radius: 50%;

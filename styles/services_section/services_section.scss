@@ -80,6 +80,11 @@
                 background: $white_color;
                 border-radius: 24px;
                 margin-bottom: 30px;
+                transition: .3s ease-in;
+            }
+
+            &-#{$item}-svg:hover {
+                transform: scale(1.2) translateX(10px);
             }
         }
 

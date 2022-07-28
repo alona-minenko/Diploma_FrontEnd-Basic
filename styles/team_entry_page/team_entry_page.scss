@@ -6,8 +6,7 @@
     height: fit-content;
     margin: $margin-desctop auto $margin-desctop;
     display: grid;
-    // grid-template-columns: auto 1fr; 
-    grid-template-columns: 400px 1fr;  // TEST
+    grid-template-columns: 400px 1fr;  
     grid-template-areas:
     "photo card-header"
     "photo card-info";
@@ -16,20 +15,19 @@
 
     @media screen and (max-width: 1300px) {
         width: calc(100vw - $margin-desctop*2);
-        grid-template-columns: 300px 1fr;  // TEST
+        grid-template-columns: 300px 1fr;  
     }
 
     @media screen and (max-width:1020px) {
         column-gap: $gap-mobile-min;
-        grid-template-areas: //      TEST
-        "photo card-header"
+        grid-template-areas:
         "photo card-header"
         "card-info card-info";
     }
 
     @media screen and (max-width:760px) {
         column-gap: 0px;        
-        grid-template-areas: //      TEST
+        grid-template-areas: 
         "photo photo"
         "card-header card-header"
         "card-info card-info";
@@ -46,8 +44,7 @@
         width: 400px;
         height: 500px;
         border-radius: 12px;
-        object-fit: cover;
-        // grid-row: 1/span 2;
+        object-fit: cover; 
         grid-area: photo;
         transition: 0.3s ease-in;
 
@@ -56,12 +53,8 @@
             height: 375px;            
         }
 
-        @media screen and (max-width:1020px) {
-            // grid-row: 1;
-        }
 
         @media screen and (max-width:760px) {
-            // grid-column: 1/ span 2;
             width: 315px;
             height: 375px;
         }        
@@ -91,7 +84,6 @@
 
         @media screen and (max-width:760px) {
             margin-top: 0px;
-            // grid-column: 1/span 2;
         }
 
         h1 {
@@ -142,9 +134,6 @@
         gap: 30px;
         grid-area: card-info;
 
-        @media screen and (max-width:1020px) {
-            // grid-column: 1/span 2;
-        }
 
         &__separator {
             width: 100%;

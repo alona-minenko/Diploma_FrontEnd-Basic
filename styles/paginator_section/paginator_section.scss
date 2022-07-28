@@ -7,7 +7,7 @@
         height: 16px;
         gap: 15px;
 
-        @for $i from 1 through 3 {
+        @for $i from 1 through 6 {
             &-#{$i}:hover:not(.paginator-active) {
                 background: $active_link_regular_color;
                 opacity: 0.6;
@@ -23,12 +23,6 @@
             background: $active_link_regular_color;
             opacity: 0.2;
             transition: .2s ease-in;
-
-            // &:hover {
-            //     background: $active_link_regular_color;
-            //     opacity: 0.6;
-            // }
-            
 
             &.paginator-active {
                 background: $active_link_regular_color;

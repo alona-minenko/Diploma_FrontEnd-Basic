@@ -87,7 +87,6 @@ header .header__logo_main_slash-page-name {
 
 
     &__background_h1 {
-        // width: 800px;
         width: 552px;
         position: absolute;
         font-style: normal;
@@ -220,7 +219,6 @@ header .header__logo_main_slash-page-name {
             max-width: 861px;
             // Отнимаю от ширины родителя ширину левого блока минус 2 gap и ширина блока с вертикальной чертой
             width: calc(100% - 375px - 120px - 4px);
-            // height: 157px;
 
             @media screen and (max-width:1000px) {
                 width: 100%;
@@ -243,14 +241,6 @@ header .header__logo_main_slash-page-name {
     }
 }
 
-// .main_wrapper-2 {
-    // width: 1600px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // margin: 0 auto;
-    // margin-top: 60px;
-
 
     .main_info__team {
         display: flex;     
@@ -270,19 +260,6 @@ header .header__logo_main_slash-page-name {
             margin: $margin-mobile-min auto 30px;
         }
 
-
-        // img {
-        //     border-radius: 12px 0px 0px 12px;
-        //     width: 400px;
-        //     height: 298px;
-        //     object-fit: cover;    
-            
-        //     @media screen and (max-width:830px) {
-        //         border-radius: 12px 12px 0px 0px;
-        //         width: 100%;
-        //         height: 500px;
-        //     }            
-        // }
 
         &-img {
             background-image: url('../../images/homepage/photo-man.png');
