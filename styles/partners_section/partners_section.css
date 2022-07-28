@@ -24,6 +24,11 @@
     border-radius: 0px;
   }
 }
+@media screen and (max-width: 1440px) {
+  .main_info__partners {
+    margin: 0px auto 0px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .main_info__partners {
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));

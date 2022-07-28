@@ -54,6 +54,11 @@
   box-shadow: 0 0 20px 10px #B3B3BA;
   border-radius: 12px 12px 5px 5px;
 }
+@media screen and (max-width: 650px) {
+  .team__info_card > div:hover {
+    transform: scale(1);
+  }
+}
 .team__info_card img {
   border-radius: 12px;
   height: 400px;

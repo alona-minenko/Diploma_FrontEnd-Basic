@@ -42,7 +42,7 @@ header .header__logo_main_slash-page-name {
     height: 600px;
     left: calc(50% - 261.7px);
     background-size: 523.4px 600px;
-    width: 435px;
+    width: 433px;
   }
 }
 .upper_wrapper__background_logo_scroll_svg {
@@ -114,14 +114,23 @@ header .header__logo_main_slash-page-name {
 }
 .upper_wrapper__experience {
   margin-top: 944px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
+  max-width: 1360px;
+  width: calc(100% - 240px);
 }
 @media screen and (max-width: 1440px) {
   .upper_wrapper__experience {
     margin-top: 743px;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .upper_wrapper__experience {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1020px) {

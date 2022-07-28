@@ -34,6 +34,14 @@ header .header__right_side_nav_menu .active {
   background-color: #F0145A;
 }
 
+.header-wrapper {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
 .header {
   width: 100%;
   display: grid;
@@ -352,19 +360,12 @@ header .header__right_side_nav_menu .active {
 }
 
 .header-wrapper {
-  height: fit-content;
   max-width: 1600px;
   width: calc(100vw - 120px);
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 50px;
 }
 @media screen and (max-width: 650px) {
   .header-wrapper {
     padding: 10px 0px 0px 0px;
-    max-width: 1600px;
-    width: calc(100% - 60px);
     width: calc(100% - 30px);
   }
 }

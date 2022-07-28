@@ -71,7 +71,7 @@
     grid-template-columns: repeat(3,1fr);
 
     @media screen and (max-width:1023.5px) {
-        grid-template-columns: repeat(auto-fill, minmax(309px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
     }
 
     &-wrapper-3 {

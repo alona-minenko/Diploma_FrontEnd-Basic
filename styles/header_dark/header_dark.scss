@@ -2,21 +2,13 @@
 
 @include header("dark",$grey_bg_color, $main_regular_color, $grey_text_color, $active_link_regular_color, $grey_bg_color);
 
-
-
 .header-wrapper {
-    height: fit-content;
     max-width: 1600px;
-    width: calc(100vw - 120px);
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 50px;
+    width: calc(100vw - $margin-desctop*2);
 
     @media screen and (max-width:650px) {
         padding: 10px 0px 0px 0px;
-        @include main-content-width($margin-mobile-min);
-        width: calc(100% - 30px);
+        width: calc(100% - $margin-mobile-min);
     }
 }
 

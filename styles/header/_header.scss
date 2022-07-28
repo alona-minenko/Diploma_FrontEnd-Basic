@@ -49,6 +49,13 @@
     }
 
 
+    .header-wrapper {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
 
     .header {
         width: 100%;

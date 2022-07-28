@@ -2,13 +2,11 @@
 
 @include header("light",rgba(245, 245, 250, 0.2),$white_color,$white_color,$white_color,rgba(255, 255, 255, 0.2));
 
-
-
 .header-wrapper {
-    padding: 50px 0px 0px 0px;
+    @include main-content-width($margin-desctop);
 
     @media screen and (max-width:650px) {
         padding: 10px 0px 0px 0px;
-        width: 100%;
+        @include main-content-width($margin-mobile-min/2);
     }
 }

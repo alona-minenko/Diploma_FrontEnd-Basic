@@ -23,6 +23,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 30px;
+  width: fit-content;
 }
 @media screen and (max-width: 693px) {
   .section_recommended__info-text h1 {

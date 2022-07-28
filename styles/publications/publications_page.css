@@ -71,7 +71,7 @@
 }
 @media screen and (max-width: 1023.5px) {
   .section_recommended__info-cards {
-    grid-template-columns: repeat(auto-fill, minmax(309px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
   }
 }
 @media screen and (max-width: 1023.5px) {

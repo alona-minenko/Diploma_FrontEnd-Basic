@@ -15,12 +15,17 @@
   flex-direction: column;
   align-items: center;
   gap: 28px;
-  margin: 0 auto;
+  margin: 60px auto 0px;
   width: calc(100% - 240px);
 }
 @media screen and (max-width: 1400px) {
   .upper_wrapper__service_name {
     width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .upper_wrapper__service_name {
+    margin: 30px auto 0px;
   }
 }
 .upper_wrapper__service_name img {

@@ -17,6 +17,7 @@
             h1 {
                 @include h1($gradient_red_text_color);
                 margin-bottom: 30px;
+                width: fit-content;
 
                 @media screen and (max-width:693px) {
                     font-size: 30px;
