@@ -63,7 +63,8 @@
         &-#{$logo} {
             background: url("../../images/partners/#{$logo}.svg") no-repeat center;
             background-color: map-get($colors, #{$logo}_color); 
-            // Массив Sass - в документе variables прописаны переменные по цветам для всех ячеек
+            // Массив Sass - в документе variables прописаны переменные по цветам для всех ячеек.
+            // По ключу получаем необходимый нам цвет
         }
     }
 }

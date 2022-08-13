@@ -89,8 +89,8 @@
                 pointer-events: none;
 
                 &:target {
-                        display: block;
-                        pointer-events: auto;
+                    display: block;
+                    pointer-events: auto;
                 }
             }
         }

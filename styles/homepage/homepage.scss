@@ -171,6 +171,7 @@ header .header__logo_main_slash-page-name {
                 overflow: hidden;
                 height: 52px;
                 white-space: nowrap;
+                // Как обрабатываются пробельные символы - nowrap - в 1 строку 
             }
 
             @media screen and (max-width:650px) {
